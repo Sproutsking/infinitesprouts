@@ -838,6 +838,10 @@ body.light-theme .card-front h5 {
   .main p {
     font-size: 1.1rem;
     max-width: 90%;
+    padding: 10px;
+  border-radius: 15px;
+  background: linear-gradient(45deg, rgba(40, 40, 40, 0.5), rgba(0, 0, 0, 0));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .main-button-container {
