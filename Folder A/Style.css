@@ -818,8 +818,11 @@ body.light-theme .card-front h5 {
   }
 
   .main-content {
+    display: flex;
     width: 90%;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
   }
 
   .main h1 {
