@@ -787,7 +787,7 @@ body.light-theme .card-front h5 {
 
 @media (max-width: 900px) {
   .main {
-    padding-top: 70px;
+    padding-top: 4%;
     min-height: calc(100vh - 70px);
     justify-content: center;
     --dot-size: 2.5px;
@@ -820,6 +820,7 @@ body.light-theme .card-front h5 {
   .main-content {
     display: flex;
     width: 90%;
+    margin: 0;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -849,13 +850,12 @@ body.light-theme .card-front h5 {
 
   .main-button-container {
     gap: 15px;
-    flex-wrap: wrap;
     justify-content: center;
   }
 
   .btn {
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
+    padding: 12px;
+    font-size: 18px;
   }
 
   .floating-message-card {
