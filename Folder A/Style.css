@@ -373,6 +373,10 @@ body.light-theme .backgroundColor {
   #main-check-team:checked ~ .header-content .theme-toggle_switch {
     display: flex;
   }
+
+  #social-icon {
+       display: flex;
+}
 }
 
 @media (max-width: 600px) {
