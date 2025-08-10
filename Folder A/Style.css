@@ -576,7 +576,7 @@ body.light-theme .backgroundColor {
             animation: underlineGlow 3s ease-in-out infinite;
         }
 
-        .main .main-content p {
+        .main p {
             margin-top: 30px;
             font-family: 'Poppins', sans-serif;
             font-size: 1.15rem;
@@ -755,6 +755,7 @@ body.light-theme .backgroundColor {
         }
 
         .card-front p {
+/*             margin: 8px 0; */
             font-size: 0.9rem;
             font-weight: 600;
             color: var(--primary-color);
@@ -770,23 +771,27 @@ body.light-theme .backgroundColor {
             background: rgba(255, 215, 0, 0.1);
             border: 1px solid var(--accent-color);
             border-radius: 25px;
-            margin: 5px;
+            margin: 5px 0;
             text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
             animation: tagFloat 4s ease-in-out infinite;
         }
 
         .card-back {
             background: linear-gradient(135deg, 
-                rgba(255, 215, 0, 0.8), 
-                rgba(0, 0, 0, 0.3),
-                rgba(0, 255, 0, 0.2),
-                rgba(255, 215, 0, 0.7));
+                rgba(255, 215, 0, 0.9), 
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 255, 0, 0.1),
+                rgba(255, 215, 0, 0.8));
             transform: rotateY(180deg);
             border-color: var(--accent-color);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(255, 215, 0, 0.3),
+                inset 0 0 30px rgba(255, 215, 0, 0.1);
         }
 
         .card-back img {
-            height: 120px; /* Reduced to fit */
+            height: 140px;
             filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
             animation: logoSpin 8s linear infinite;
         }
@@ -845,10 +850,32 @@ body.light-theme .backgroundColor {
             100% { transform: translateY(50px); }
         }
 
+        @keyframes backgroundFlow {
+            0%, 100% { 
+                background: 
+                    radial-gradient(circle at 20% 20%, rgba(0, 255, 0, 0.15) 0%, transparent 30%),
+                    radial-gradient(circle at 80% 30%, rgba(255, 215, 0, 0.1) 0%, transparent 25%),
+                    radial-gradient(circle at 40% 70%, rgba(0, 255, 0, 0.08) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.12) 0%, transparent 35%);
+            }
+            50% { 
+                background: 
+                    radial-gradient(circle at 80% 60%, rgba(0, 255, 0, 0.2) 0%, transparent 35%),
+                    radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.15) 0%, transparent 30%),
+                    radial-gradient(circle at 60% 20%, rgba(0, 255, 0, 0.12) 0%, transparent 45%),
+                    radial-gradient(circle at 10% 40%, rgba(255, 215, 0, 0.08) 0%, transparent 30%);
+            }
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
             10%, 90% { opacity: 1; }
             50% { opacity: 0.8; }
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
         }
 
         @keyframes slideInMagnetic {
@@ -972,16 +999,6 @@ body.light-theme .backgroundColor {
             50% { transform: rotate(180deg) scale(1.1); }
             100% { transform: rotate(360deg) scale(1); }
         }
-
-        @keyframes glassPulse {
-            0%, 100% { 
-                box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
-                background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(255, 215, 0, 0.2), rgba(0, 0, 0, 0.4));
-            }
-            50% { 
-                box-shadow: 0 15px 40px rgba(0, 255, 0, 0.3), inset 0 0 30px rgba(255, 215, 0, 0.2);
-                background: linear-gradient(135deg, rgba(0, 255, 0, 0.3), rgba(255, 215, 0, 0.3), rgba(0, 0, 0, 0.5));
-            }
 
         /* MEDIA QUERIES */
         @media (max-width: 1000px) {
