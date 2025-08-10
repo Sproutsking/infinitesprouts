@@ -777,20 +777,16 @@ body.light-theme .backgroundColor {
 
         .card-back {
             background: linear-gradient(135deg, 
-                rgba(255, 215, 0, 0.9), 
-                rgba(0, 0, 0, 0.2),
-                rgba(0, 255, 0, 0.1),
-                rgba(255, 215, 0, 0.8));
+                rgba(255, 215, 0, 0.8), 
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 255, 0, 0.2),
+                rgba(255, 215, 0, 0.7));
             transform: rotateY(180deg);
             border-color: var(--accent-color);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.3),
-                0 0 40px rgba(255, 215, 0, 0.3),
-                inset 0 0 30px rgba(255, 215, 0, 0.1);
         }
 
         .card-back img {
-            height: 180px;
+            height: 120px; /* Reduced to fit */
             filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
             animation: logoSpin 8s linear infinite;
         }
