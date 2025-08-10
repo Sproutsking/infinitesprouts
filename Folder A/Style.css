@@ -826,56 +826,6 @@ body.light-theme .backgroundColor {
     animation: logoSpin 8s linear infinite;
 }
 
-        /* LIGHT THEME ENHANCEMENTS */
-        body.light-theme .main p {
-            color: #333;
-            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-            background: linear-gradient(135deg, rgba(0, 255, 0, 0.3), rgba(255, 215, 0, 0.3), rgba(255, 255, 255, 0.5));
-            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
-        }
-
-        body.light-theme .intro-green {
-            color: #000;
-        }
-
-        body.light-theme .yellow {
-            color: #000;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.1);
-        }
-
-        body.light-theme .yellow:hover {
-            color: #fff;
-        }
-
-        body.light-theme .green {
-            color: #fff;
-            box-shadow: 0 0 30px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.1);
-        }
-
-        body.light-theme .green:hover {
-            color: #000;
-        }
-
-        body.light-theme .floating-message-card .card-front {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(0, 255, 0, 0.1), rgba(255, 215, 0, 0.1));
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 255, 0, 0.1);
-        }
-
-        body.light-theme .floating-message-card .card-back {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(255, 255, 255, 0.3));
-        }
-
-        body.light-theme .card-front h5 {
-            color: #000;
-            background: rgba(255, 255, 255, 0.8);
-            text-shadow: none;
-        }
-
-        body.light-theme .card-front p {
-            color: var(--primary-color);
-            text-shadow: none;
-        }
-
         /* ANIMATIONS */
         @keyframes parallax {
             0% { transform: translateY(0); }
