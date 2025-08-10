@@ -384,7 +384,7 @@ body.light-theme .backgroundColor {
        border-top: 1px solid lime;
   } 
        
-  #social-icon li {
+  #social-icon li .bx {
        color: var(--accent-color);
        background: black;
        border: 1px solid lime;
