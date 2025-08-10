@@ -376,6 +376,7 @@ body.light-theme .backgroundColor {
 
   #social-icon {
        display: flex;
+         flex-direction: row;
 }
 }
 
