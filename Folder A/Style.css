@@ -700,131 +700,102 @@ body.light-theme .backgroundColor {
         }
 
         /* FLOATING CARD STYLES */
-.floating-message-card {
-    position: absolute;
-    top: 50%;
-    right: 8%;
-    width: 300px;
-    height: 200px;
-    perspective: 1200px;
-    z-index: 15;
-    animation: cardFloat 6s ease-in-out infinite;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* FLOATING CARD STYLES */
+        .floating-message-card {
+            position: absolute;
+            top: 50%;
+            right: 8%;
+            width: 300px;
+            height: 200px;
+            perspective: 1200px;
+            z-index: 15;
+            animation: cardFloat 6s ease-in-out infinite;
+        }
 
-.floating-message-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 50px rgba(0, 255, 0, 0.4);
-}
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transform-style: preserve-3d;
+            animation: cardSpin 12s cubic-bezier(0.23, 1, 0.320, 1) infinite;
+            transition: all 0.4s ease;
+        }
 
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transform-style: preserve-3d;
-    animation: cardSpin 12s cubic-bezier(0.23, 1, 0.320, 1) infinite;
-    transition: transform 0.4s ease;
-}
+        .floating-message-card:hover .card-inner {
+            animation-play-state: paused;
+            transform: rotateY(180deg) scale(1.1);
+        }
 
-.floating-message-card:hover .card-inner {
-    animation-play-state: paused;
-    transform: rotateY(180deg) scale(1.1);
-}
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid;
+            backdrop-filter: blur(15px);
+        }
 
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly; /* Changed to space-evenly for better distribution */
-    padding: 20px; /* Increased padding */
-    border: 2px solid;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 15px 40px rgba(0, 255, 0, 0.3), inset 0 0 30px rgba(255, 215, 0, 0.2);
-    animation: glassPulse 4s ease-in-out infinite;
-    gap: 5px; /* Added for spacing between elements */
-}
+        .card-front {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.9), 
+                rgba(0, 255, 0, 0.1), 
+                rgba(255, 215, 0, 0.1),
+                rgba(0, 0, 0, 0.8));
+            border-color: var(--primary-color);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(0, 255, 0, 0.2),
+                inset 0 0 30px rgba(0, 255, 0, 0.05);
+        }
 
-.card-front {
-    background: linear-gradient(135deg, 
-        rgba(0, 0, 0, 0.8), 
-        rgba(0, 255, 0, 0.3), 
-        rgba(255, 215, 0, 0.3),
-        rgba(0, 0, 0, 0.7));
-    border-color: var(--primary-color);
-}
+        .card-front p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            animation: textGlowPulse 3s ease-in-out infinite;
+        }
 
-.card-front::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(0, 255, 0, 0.2), transparent);
-    transform: translateX(-100%);
-    animation: smokyFlow 6s ease-in-out infinite;
-    pointer-events: none;
-}
+        .card-front h5 {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 8px 16px;
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid var(--accent-color);
+            border-radius: 25px;
+            margin: 5px 0;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+            animation: tagFloat 4s ease-in-out infinite;
+        }
 
-.card-front p {
-    margin: 0; /* Removed margin to control spacing with gap */
-    font-size: 0.75rem; /* Further reduced */
-    font-weight: 600;
-    color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    animation: textGlowPulse 3s ease-in-out infinite;
-    line-height: 1.2; /* Added for readability */
-}
+        .card-back {
+            background: linear-gradient(135deg, 
+                rgba(255, 215, 0, 0.9), 
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 255, 0, 0.1),
+                rgba(255, 215, 0, 0.8));
+            transform: rotateY(180deg);
+            border-color: var(--accent-color);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(255, 215, 0, 0.3),
+                inset 0 0 30px rgba(255, 215, 0, 0.1);
+        }
 
-.card-front h5 {
-    color: var(--accent-color);
-    font-size: 0.85rem; /* Further reduced */
-    font-weight: 700;
-    padding: 5px 10px;
-    background: rgba(255, 215, 0, 0.2);
-    border: 1px solid var(--accent-color);
-    border-radius: 15px;
-    margin: 0; /* Removed margin */
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-    animation: tagFloat 4s ease-in-out infinite;
-    line-height: 1.2;
-}
-
-.card-back {
-    background: linear-gradient(135deg, 
-        rgba(255, 215, 0, 0.8), 
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 255, 0, 0.3),
-        rgba(255, 215, 0, 0.7));
-    transform: rotateY(180deg);
-    border-color: var(--accent-color);
-}
-
-.card-back::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.2), transparent);
-    transform: translateX(-100%);
-    animation: smokyFlow 6s ease-in-out infinite;
-    pointer-events: none;
-}
-
-.card-back img {
-    height: 100px; /* Further reduced */
-    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
-    animation: logoSpin 8s linear infinite;
-}
+        .card-back img {
+            height: 140px;
+            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+            animation: logoSpin 8s linear infinite;
+        }
 
         /* ANIMATIONS */
         @keyframes parallax {
