@@ -376,8 +376,17 @@ body.light-theme .backgroundColor {
 
   #social-icon {
        display: flex;
-         flex-direction: row;
-}
+       flex-direction: row;
+       background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(255, 215, 0, 0.2));
+       color: var(--accent-color);
+       border-top: 1px solid lime;
+  } 
+       
+  #social-icon li {
+       background: black;
+       border: 1px solid lime;
+       border-radius: 12px;
+  }
 }
 
 @media (max-width: 600px) {
