@@ -586,7 +586,7 @@ body.light-theme .backgroundColor {
             color: rgba(255, 255, 255, 0.9);
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
             position: relative;
-            padding: 20px;
+/*             padding: 20px; */
             border-radius: 20px;
             background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(255, 215, 0, 0.2), rgba(0, 0, 0, 0.4));
             backdrop-filter: blur(15px); /* Enhanced glass effect */
@@ -755,7 +755,6 @@ body.light-theme .backgroundColor {
         }
 
         .card-front p {
-/*             margin: 8px 0; */
             font-size: 0.9rem;
             font-weight: 600;
             color: var(--primary-color);
@@ -771,7 +770,7 @@ body.light-theme .backgroundColor {
             background: rgba(255, 215, 0, 0.1);
             border: 1px solid var(--accent-color);
             border-radius: 25px;
-            margin: 5px 0;
+            margin: 5px;
             text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
             animation: tagFloat 4s ease-in-out infinite;
         }
@@ -791,7 +790,7 @@ body.light-theme .backgroundColor {
         }
 
         .card-back img {
-            height: 140px;
+            height: 180px;
             filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
             animation: logoSpin 8s linear infinite;
         }
