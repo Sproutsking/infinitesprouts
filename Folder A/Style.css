@@ -275,7 +275,7 @@ body.light-theme .backgroundColor {
 #main-check-team:checked ~ .menu-icon #close-menu {
   display: block;
 }
-.social-icon {
+#social-icon {
        display: none;
 }
 @media (max-width: 900px) {
