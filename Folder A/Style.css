@@ -795,8 +795,6 @@ body.light-theme .backgroundColor {
         body.light-theme .main p {
             color: #333;
             text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-            background: linear-gradient(135deg, rgba(0, 255, 0, 0.3), rgba(255, 215, 0, 0.3), rgba(255, 255, 255, 0.5));
-            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
         }
 
         body.light-theme .intro-green {
@@ -984,7 +982,6 @@ body.light-theme .backgroundColor {
                 box-shadow: 0 15px 40px rgba(0, 255, 0, 0.3), inset 0 0 30px rgba(255, 215, 0, 0.2);
                 background: linear-gradient(135deg, rgba(0, 255, 0, 0.3), rgba(255, 215, 0, 0.3), rgba(0, 0, 0, 0.5));
             }
-        }
 
         /* MEDIA QUERIES */
         @media (max-width: 1000px) {
