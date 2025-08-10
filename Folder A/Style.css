@@ -768,7 +768,7 @@ body.light-theme .backgroundColor {
             font-weight: 700;
             padding: 8px 5px;
             background: rgba(255, 215, 0, 0.1);
-            border: 1px solid var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
             border-radius: 25px;
             margin: 5px;
             text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
