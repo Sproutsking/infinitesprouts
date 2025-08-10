@@ -1369,7 +1369,7 @@ body.light-theme .backgroundColor {
                 background:
                   radial-gradient(600px circle at center 10px, var(--primary-color), #031801, #021101, 35%, transparent 51%),
                   radial-gradient(600px circle at right center, var(--secondary-color), #08290e, #051606, 36%, transparent 50.4%),
-                  radial-gradient(1000px circle at 20px bottom, var(--accent-color), #033307, #022707, 36%, transparent 51%),
+/*                   radial-gradient(1000px circle at 20px bottom, var(--accent-color), #033307, #022707, 36%, transparent 51%), */
                   linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                   linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                   var(--dot-color);
