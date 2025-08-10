@@ -385,6 +385,7 @@ body.light-theme .backgroundColor {
   } 
        
   #social-icon li .bx {
+       padding: 10px;
        color: var(--accent-color);
        background: black;
        border: 1px solid lime;
