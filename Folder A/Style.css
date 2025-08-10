@@ -381,7 +381,7 @@ body.light-theme .backgroundColor {
        flex-direction: row;
        background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(255, 215, 0, 0.2));
        color: var(--accent-color);
-       border-top: 1px solid lime;
+/*        border-top: 1px solid lime; */
   } 
        
   #social-icon li .bx {
