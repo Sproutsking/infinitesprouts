@@ -492,7 +492,6 @@ body.light-theme .backgroundColor {
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding-left: 4%;
             position: relative;
             z-index: 10;
         }
