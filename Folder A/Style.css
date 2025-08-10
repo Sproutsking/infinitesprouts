@@ -755,7 +755,7 @@ body.light-theme .backgroundColor {
         }
 
         .card-front p {
-            margin: 8px 0;
+/*             margin: 8px 0; */
             font-size: 0.9rem;
             font-weight: 600;
             color: var(--primary-color);
@@ -767,7 +767,7 @@ body.light-theme .backgroundColor {
             color: var(--accent-color);
             font-size: 1.1rem;
             font-weight: 700;
-            padding: 8px 8px;
+            padding: 8px 5px;
             background: rgba(255, 215, 0, 0.1);
             border: 1px solid var(--accent-color);
             border-radius: 25px;
