@@ -584,16 +584,6 @@ body.light-theme .backgroundColor {
             max-width: 650px;
             line-height: 1.9;
             color: rgba(255, 255, 255, 0.9);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            position: relative;
-            padding: 20px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(255, 215, 0, 0.2), rgba(0, 0, 0, 0.4));
-            backdrop-filter: blur(15px); /* Enhanced glass effect */
-            border: 1px solid rgba(0, 255, 0, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
-            animation: glassPulse 4s ease-in-out infinite, fadeInUp 2s ease-out 0.5s both;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .main p:hover {
