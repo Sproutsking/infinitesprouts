@@ -976,6 +976,7 @@ body.light-theme .backgroundColor {
             }
 
         /* MEDIA QUERIES */
+         /* MEDIA QUERIES */
         @media (max-width: 1000px) {
             .floating-message-card {
                 height: 150px;
