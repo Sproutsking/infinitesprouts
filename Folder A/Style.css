@@ -1252,11 +1252,11 @@ body.light-theme .backgroundColor {
             }
 
             .main-button-container {
-                
+                width: 80%;
             }
 
             .btn {
-                font-size: 10px;
+                font-size: 12px;
                 width: 85%;
                 text-align: center;
                 padding: 14px 20px;
