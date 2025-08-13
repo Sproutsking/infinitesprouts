@@ -504,7 +504,7 @@ body.light-theme .backgroundColor {
 
         /* MAIN CONTENT CONTAINER */
         .main_container {
-            padding-top: 100px
+            padding-top: 200px
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
