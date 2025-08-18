@@ -126,5 +126,44 @@ closePopup.addEventListener('click', () => {
   popup.style.display = 'none';
 });
 
+
+
+
+// Get elements
+        const getStartedBtn = document.getElementById('getStartedBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const popupOverlay = document.getElementById('popupOverlay');
+
+        // Show popup when Get Started button is clicked
+        getStartedBtn.addEventListener('click', function() {
+            popupOverlay.classList.add('active');
+        });
+
+        // Close popup functionality
+        closeBtn.addEventListener('click', function() {
+            popupOverlay.style.animation = 'fadeInOverlay 0.3s ease-out reverse';
+            setTimeout(() => {
+                popupOverlay.classList.remove('active');
+                popupOverlay.style.animation = '';
+            }, 300);
+        });
+
+        // Close on overlay click (optional)
+        popupOverlay.addEventListener('click', function(e) {
+            if (e.target === popupOverlay) {
+                closeBtn.click();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+                closeBtn.click();
+            }
+        });
+
+
+
+
 // Initialize main page on load
 showMainPage('#main_section');
