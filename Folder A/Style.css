@@ -517,9 +517,12 @@ body.light-theme .backgroundColor {
         }
 
         .main-content {
+               display: flex;
+               align-item: center;
+               justify-content: center;
             position: relative;
             z-index: 10;
-            max-width: 700px;
+            max-width: 76%;
             flex: 1;
             text-align: left;
             animation: slideInMagnetic 2s cubic-bezier(0.23, 1, 0.320, 1);
