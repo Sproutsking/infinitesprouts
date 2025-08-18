@@ -520,6 +520,7 @@ body.light-theme .backgroundColor {
                display: flex;
                align-item: center;
                justify-content: center;
+               flex-direction: column;
             position: relative;
             z-index: 10;
             max-width: 76%;
