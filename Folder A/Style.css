@@ -2200,36 +2200,6 @@ button.footer-label:hover {
 
 
 
-
-
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-    :root {
-      --background-color: #000000;
-      --text-color: #ffffff;
-      --primary-color: lime;
-      --secondary-color: #c8ff00;
-      --accent-color: gold;
-      --button-background: #000000;
-      --button-text-color: lime;
-      --popup-background: #ffffff;
-      --popup-text-color: #000000;
-      --active-color: lime;
-      --danger-color: #ff0000;
-      --message-limit-color: #ff4d4d;
-      --transition-speed: 0.3s;
-      --close-button: red;
-      --sidebar-background: #000000;
-      --sidebar-gradient-1: #000000;
-      --sidebar-gradient-2: #000000;
-      --box-shadow: 2px 2px 4px #2b2b2b, -2px -2px 4px #2b2b2b;
-      --box-shadow-1: 0 0 4px 1px lime;
-      --border: 1px solid #3c3c3c;
-      --dot-bg: #000000;
-      --dot-color: rgba(255, 255, 255, 0.5);
-      --dot-size: 2px;
-      --dot-space: 20px;
-    }
-
     
    
     /* COMING SOON POPUP STYLES - ONLY NEW ADDITIONS */
@@ -2573,14 +2543,5 @@ button.footer-label:hover {
         width: 35px;
         height: 35px;
         font-size: 16px;
-      }
-
-      .main-content h1 {
-        font-size: 2rem;
-      }
-
-      .main-button-container {
-        flex-direction: column;
-        align-items: center;
       }
     }
