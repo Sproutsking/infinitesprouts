@@ -583,8 +583,8 @@ body.light-theme .backgroundColor {
                 goldLevitate 6s ease-in-out infinite,
                 goldGlow 3s ease-in-out infinite;
             text-shadow: 
-                0 0 10px rgba(255, 215, 0, 0.8),
-                0 0 12px rgba(255, 215, 0, 0.5);
+                0 0 6px rgba(255, 215, 0, 0.8),
+                0 0 8px rgba(255, 215, 0, 0.5);
         }
 
         .gold::before {
@@ -600,7 +600,7 @@ body.light-theme .backgroundColor {
         }
 
         .main p {
-            margin-top: 30px;
+            margin-top: 38px;
             font-family: 'Poppins', sans-serif;
             font-size: 1.15rem;
             font-weight: 400;
@@ -609,18 +609,14 @@ body.light-theme .backgroundColor {
             color: rgba(255, 255, 255, 0.9);
         }
 
-        .main p:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 40px rgba(0, 255, 0, 0.3), inset 0 0 30px rgba(255, 215, 0, 0.2);
-        }
-
         /* BUTTON STYLES */
         .main-button-container {
             display: flex;
             flex-direction: row;
             gap: 30px;
             margin-top: 40px;
-            justify-content: flex-start;
+            align-item: center;
+            justify-content: center;
             z-index: 20;
             animation: buttonsSlideIn 2s ease-out 1s both;
         }
