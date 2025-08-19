@@ -184,12 +184,12 @@ body::before {
 
 /* Hero Card */
 .hero-card {
-  margin-top: 10%;
+  margin-top: 0;
   background: var(--sidebar-background);
   border: var(--border);
   border-radius: 30px;
   padding: 12px 20px;
-  min-width: 400px;
+  width: 30%;
   position: relative;
   overflow: hidden;
   animation: fadeInUp 0.8s ease-out;
@@ -1036,9 +1036,7 @@ body::before {
   }
 
   .hero-card {
-    min-width: auto;
-    width: 100%;
-    max-width: 400px;
+    width: 94%;
   }
 
   .farmers-grid, .team_container_content {
@@ -2055,7 +2053,7 @@ body::before {
                 gap: 20px;
                 padding: 0;
                 margin: 0;
-                margin-bottom: 34px;
+                margin-bottom: 10px;
                 justify-content: space-between;
             }
 
