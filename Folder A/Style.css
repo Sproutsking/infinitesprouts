@@ -425,6 +425,8 @@ body::before {
 
 
 @media (max-width: 768px) {
+  .about_us {
+    width: 100%;
 
   .about_container {
     width: 100%;
@@ -500,7 +502,7 @@ body::before {
   background: var(--sidebar-background);
   border: var(--border);
   border-radius: 15px;
-  padding: 2rem;
+  padding: 12px;
   transition: all var(--transition-speed);
   position: relative;
   overflow: hidden;
