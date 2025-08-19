@@ -545,6 +545,10 @@ body::before {
 }
 @media (max-width: 768px) {
   .ecosystem-card {
+    display: flex;
+    flex-direction:column;
+    align-item: center;
+    justify-content: center;
     width: 94%;
   }
 /* Team Section */
