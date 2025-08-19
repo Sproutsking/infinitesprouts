@@ -446,10 +446,11 @@ body::before {
 }
 
 .ecosystem-card {
-  background: var(--card-bg);
-  border-radius: var(--border-radius);
+  background: var(--sidebar-background);
+  border: var(--border);
+  border-radius: 15px;
   box-shadow: var(--shadow), 0 0 0 2px var(--lime);
-  padding: 2.2rem 1.5rem 1.8rem 1.5rem;
+  padding: 12px;
   text-align: center;
   transition: box-shadow 0.22s, transform 0.22s;
   position: relative;
