@@ -473,7 +473,7 @@ body::before {
 
 /* Ecosystem Section */
 .ecosystem_section {
-  padding: 5rem 2rem;
+  padding: 4%;
   background: linear-gradient(180deg, transparent, rgba(50, 205, 50, 0.05), transparent);
 }
 
@@ -493,7 +493,7 @@ body::before {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .ecosystem-card {
