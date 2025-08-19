@@ -2160,11 +2160,15 @@ body::before {
                 padding: 16px;
             }
           .main-button-container {
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
                 padding: 0;
                 margin-bottom: 34px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
             }
                .btn {
                 display: flex;
