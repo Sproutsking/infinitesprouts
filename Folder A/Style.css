@@ -567,124 +567,19 @@ p {
 }
 
 /* Team Section */
-.team-page {
-  display: none;
-  min-height: 100vh;
-  width: 100%;
-  background: linear-gradient(180deg, transparent, rgba(50, 205, 50, 0.05), transparent);
-}
-
-.team-page.active {
-  display: block;
-}
-
 .team_section {
-  padding: 6rem 2rem;
+  background: var(--section-bg);
+  padding: 4rem 1vw;
 }
-
-.team_container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.team_heading {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
 .team_heading h2 {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  text-shadow: 0 0 10px var(--primary-color);
-}
-
-.team_container_content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.team-cards {
-  background: var(--sidebar-background);
-  border: var(--border);
-  border-radius: 15px;
-  padding: 2rem;
+  color: var(--lime);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
   text-align: center;
-  transition: all var(--transition-speed);
-  position: relative;
-  overflow: hidden;
+  margin-bottom: 2.8rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 16px var(--lime-glow);
 }
-
-.team-cards::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-}
-
-.team-cards:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--box-shadow-1);
-  border-color: var(--primary-color);
-}
-
-.team-icon {
-  margin-bottom: 1rem;
-}
-
-.icon-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--primary-color);
-  transition: transform var(--transition-speed);
-}
-
-.team-cards:hover .icon-img {
-  transform: scale(1.1);
-}
-
-.content-info {
-  padding: 0.5rem;
-}
-
-.content_info_contents h3 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.content_info_contents h4 {
-  color: var(--secondary-color);
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.team-social-icon {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 1rem;
-}
-
-.team-social-icon a {
-  color: var(--text-color);
-  font-size: 1.2rem;
-  transition: all var(--transition-speed);
-}
-
-.team-social-icon a:hover {
-  color: var(--primary-color);
-  text-shadow: 0 0 10px var(--primary-color);
-}
-
-
 
 .team_container_content {
   display: grid;
@@ -702,50 +597,114 @@ p {
   transition: box-shadow 0.22s, transform 0.22s;
   position: relative;
   overflow: hidden;
+  max-width: 340px;
   min-width: 0;
-  width: 100%;
-  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* For consistent height across cards */
   min-height: 370px;
+}
+
+.team-cards::before {
+  content: "";
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 140px; height: 140px;
+  background: radial-gradient(circle, var(--lime-glow) 0%, transparent 70%);
+  filter: blur(15px);
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.team-cards:hover {
+  box-shadow: 0 12px 48px var(--lime-glow), 0 0 0 3px var(--lime-accent);
+  transform: translateY(-7px) scale(1.03);
 }
 
 .team-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
   z-index: 1;
 }
 
 .icon-img {
-  width: 92px;
-  height: 92px;
+  width: 120px;            /* BIG, visible avatar */
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--lime, #CFFF04);
-  box-shadow: 0 0 16px var(--lime-glow, #AEEA00), 0 0 32px #111 inset;
-  background: var(--icon-bg, linear-gradient(135deg, #222 40%, #CFFF04 100%));
+  border: 4px solid var(--lime);
+  box-shadow: 0 0 20px var(--lime-glow), 0 0 32px #111 inset;
+  background: var(--icon-bg);
   transition: box-shadow 0.2s, border-color 0.2s;
+  background-size: cover;
 }
 
 .team-cards:hover .icon-img {
-  border-color: var(--lime-glow, #AEEA00);
-  box-shadow: 0 0 32px var(--lime, #CFFF04), 0 0 24px var(--lime-glow, #AEEA00);
+  border-color: var(--lime-glow);
+  box-shadow: 0 0 36px var(--lime), 0 0 30px var(--lime-glow);
 }
 
-/* Ensures all .team-cards are the same height, even if content is short */
-.team-cards .content-info {
+.content-info {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  z-index: 2;
+  gap: 0.6rem;
 }
 
-/* Responsive Tweaks */
+.content_info_contents h3 {
+  color: var(--lime);
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 0.3rem 0 0.1rem 0;
+  letter-spacing: 0.01em;
+  text-shadow: 0 0 7px var(--lime-glow);
+}
+
+.content_info_contents h4 {
+  color: var(--lime-accent);
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.82;
+  text-shadow: 0 0 5px var(--lime-glow);
+}
+
+.team-social-icon {
+  list-style: none;
+  display: flex;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  justify-content: center;
+}
+
+.team-social-icon li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #222 25%, var(--lime) 100%);
+  border-radius: 50%;
+  color: var(--black);
+  font-size: 1.5rem;
+  box-shadow: 0 0 14px var(--lime-glow);
+  transition: background 0.2s, color 0.2s, box-shadow 0.18s;
+}
+
+.team-social-icon li a:hover {
+  background: linear-gradient(135deg, #222 5%, var(--lime-glow) 95%);
+  color: var(--lime);
+  box-shadow: 0 0 20px var(--lime-glow), 0 0 8px var(--lime-accent);
+}
+
+/* Responsive tweaks for smaller screens */
 @media (max-width: 900px) {
   .team_container_content {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -757,8 +716,8 @@ p {
     min-height: 300px;
   }
   .icon-img {
-    width: 64px;
-    height: 64px;
+    width: 90px;
+    height: 90px;
   }
 }
 @media (max-width: 600px) {
@@ -773,8 +732,8 @@ p {
     min-height: 220px;
   }
   .icon-img {
-    width: 48px;
-    height: 48px;
+    width: 62px;
+    height: 62px;
   }
 }
 
