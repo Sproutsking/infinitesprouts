@@ -350,7 +350,7 @@ body::before {
 
 /* About Section */
 .about_us {
-  padding: 5rem 2rem;
+  padding: 5%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -421,6 +421,56 @@ body::before {
 .about_container p {
   opacity: 0.9;
   line-height: 1.8;
+}
+
+
+@media (max-width: 768px) {
+  .about_us {
+    width: 100%;
+
+  .about_container {
+    width: 100%;
+  }
+
+  .about_container ol {
+    border-left: none;
+    padding: 0;
+  }
+
+  .about_container li {
+    margin: 0;
+    margin-bottom: 1rem;
+/*     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(15, 70, 5, 0.1)); */
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .about_container li:hover {
+    transform: scale(1.02);
+  }
+
+  .about_container li span.marker {
+    display: none;
+  }
+
+  .about_container h3 {
+    font-size: 1.2rem;
+  }
+
+  .about_container h3 span.question {
+    font-size: 1rem;
+  }
+
+  .about_container p {
+    font-size: 0.9rem;
+  }
+
+  .about_heading h2 {
+    font-size: 1.8rem;
+  }
 }
 
 /* Ecosystem Section */
@@ -1029,10 +1079,61 @@ p {
   }
 
   .hero-card {
-    min-width: auto;
-    width: 100%;
-    max-width: 400px;
+    margin: 0;
+    width: 94%;
   }
+  .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.card-stats {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border: var(--border);
+  border-radius: 25px;
+}
+.card-title {
+  font-size: 16px;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.stat-label {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+.stat-value {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.card-footer {
+  text-align: center;
+}
 
   .farmers-grid, .team_container_content {
     grid-template-columns: 1fr;
