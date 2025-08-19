@@ -350,7 +350,7 @@ body::before {
 
 /* About Section */
 .about_us {
-  padding: 5rem 2rem;
+  padding: 4%;
   max-width: 1200px;
   margin: 0 auto;
 }
