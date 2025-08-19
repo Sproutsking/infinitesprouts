@@ -1958,7 +1958,7 @@ body::before {
                 flex-direction: column;
                 align-items: center;
                 margin: 0;
-                width: 90%;
+                width: 100%;
             }
 
             .main-content {
@@ -1989,7 +1989,7 @@ body::before {
                 max-width: 90%;
                 padding: 10px;
                 border-radius: 20px;
-                background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(255, 215, 0, 0.2), rgba(0, 0, 0, 0.4));
+                background: var(--sidebar-background);
                 backdrop-filter: blur(15px);
                 border: 1px solid rgba(0, 255, 0, 0.3);
                 box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
@@ -2002,15 +2002,18 @@ body::before {
             }
 
             .main-button-container {
+                display: flex;
+                flex-direction: column;
                 gap: 20px;
                 padding: 0;
-                margin-bottom: 34px;
+                margin: 0;
+                margin-bottom: 10px;
                 justify-content: space-between;
             }
 
             .btn {
                 padding: 14px 28px;
-                font-size: 10px;
+                font-size: 12px;
                 width: 40%;
             }
         }
@@ -2028,7 +2031,7 @@ body::before {
                     var(--dot-color);
             }
             .main_container {
-                padding-top: 70px;
+                padding-top: 60px;
             }
 
             body.light-theme .main {
@@ -2054,8 +2057,12 @@ body::before {
             }
 
             .main p {
+                width: 100%;
                 font-size: 1rem;
                 padding: 18px;
+                margin: 0;
+              margin-top: 14px;
+              margin-bottom: 25px;
             }
 
             .btn {
@@ -2103,6 +2110,17 @@ body::before {
             .main p {
                 font-size: 0.9rem;
                 padding: 16px;
+            }
+          .main-button-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 0;
+                margin-bottom: 34px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
             }
                .btn {
                 display: flex;
@@ -2169,6 +2187,7 @@ body::before {
                 padding: 14px 20px;
             }
         }
+
 
 /*===== SCROLLABLE CARDS====== */
 .card-section {
