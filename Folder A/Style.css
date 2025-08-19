@@ -2130,7 +2130,7 @@ body::before {
                     var(--dot-color);
             }
             .main_container {
-                padding-top: 70px;
+                padding-top: 60px;
             }
 
             body.light-theme .main {
@@ -2160,6 +2160,7 @@ body::before {
                 font-size: 1rem;
                 padding: 18px;
                 margin: 0;
+              margin-bottom: 25px;
             }
 
             .btn {
