@@ -554,6 +554,17 @@ body::before {
     justify-content: center;
     width: 94%;
   }
+  content-info {
+    display: flex;
+    align-etem: center;
+    justify-content: center;
+  }
+  .ecosystem_section i {
+    border: 1px solid lime;
+    broder-radius: 50%;
+    background: black
+  }
+}
 /* Team Section */
 .team-page {
   display: none;
