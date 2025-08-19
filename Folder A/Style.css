@@ -622,6 +622,13 @@ body.light-theme .backgroundColor {
             z-index: 20;
             animation: buttonsSlideIn 2s ease-out 1s both;
         }
+        .main-button-container a {
+            gap: 10px;
+            display: flex;
+            flex-direction: row;
+            align-item: center;
+            justify-content: center;
+        }
 
         .btn {
             text-decoration: none;
@@ -1115,7 +1122,7 @@ body.light-theme .backgroundColor {
 
             .main-button-container {
                 gap: 20px;
-                justify-content: center;
+                justify-content: space-between;
             }
 
             .btn {
