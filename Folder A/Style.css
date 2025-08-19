@@ -1079,29 +1079,11 @@ p {
   }
 
   .hero-card {
-    margin: 0;
-    width: 94%;
+    min-width: auto;
+    width: 100%;
+    max-width: 400px;
   }
-  .card-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 15px;
-}
-
-.card-icon {
-  font-size: 2rem;
-  color: var(--primary-color);
-}
-
-.card-title {
-  font-size: 1.3rem;
-  color: var(--secondary-color);
-  font-weight: bold;
-}
-
-.card-stats {
+  .card-stats {
   display: grid;
   gap: 6px;
   margin-bottom: 2rem;
@@ -1131,10 +1113,6 @@ p {
   font-size: 12px;
 }
 
-.card-footer {
-  text-align: center;
-}
-
   .farmers-grid, .team_container_content {
     grid-template-columns: 1fr;
     padding: 1rem;
@@ -1148,6 +1126,7 @@ p {
     flex-direction: column;
   }
 }
+
 
 /* Animations */
 .fade-in {
