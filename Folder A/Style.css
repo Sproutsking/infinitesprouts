@@ -423,6 +423,54 @@ body::before {
   line-height: 1.8;
 }
 
+
+@media (max-width: 768px) {
+
+  .about_container {
+    width: 95%;
+  }
+
+  .about_container ol {
+    border-left: none;
+    padding: 0;
+  }
+
+  .about_container li {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(15, 70, 5, 0.1));
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .about_container li:hover {
+    transform: scale(1.02);
+  }
+
+  .about_container li span.marker {
+    display: none;
+  }
+
+  .about_container h3 {
+    font-size: 1.2rem;
+  }
+
+  .about_container h3 span.question {
+    font-size: 1rem;
+  }
+
+  .about_container p {
+    font-size: 0.9rem;
+  }
+
+  .about_heading h2 {
+    font-size: 1.8rem;
+  }
+}
+
 /* Ecosystem Section */
 .ecosystem_section {
   padding: 5rem 2rem;
