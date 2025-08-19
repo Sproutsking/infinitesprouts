@@ -447,8 +447,8 @@ body::before {
 }
 
 .ecosystem-card {
-  background: var(--card-bg);
-  border-radius: var(--border-radius);
+  background: var(--sidebar-background);
+  border-radius: 15px;
   box-shadow: var(--shadow), 0 0 0 2px var(--lime);
   padding: 2.2rem 1.5rem 1.8rem 1.5rem;
   text-align: center;
@@ -457,8 +457,8 @@ body::before {
   overflow: hidden;
   min-width: 0;
   max-width: 340px;
+  border: var(--border);
 }
-
 .ecosystem-card::before {
   content: "";
   position: absolute;
