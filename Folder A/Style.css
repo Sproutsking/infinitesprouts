@@ -350,7 +350,7 @@ body::before {
 
 /* About Section */
 .about_us {
-  padding: 5rem 2rem;
+  padding: 5%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -423,12 +423,65 @@ body::before {
   line-height: 1.8;
 }
 
-/* Ecosystem Section */
-.ecosystem_section {
-  padding: 5rem 2rem;
-  background: linear-gradient(180deg, transparent, rgba(50, 205, 50, 0.05), transparent);
+
+@media (max-width: 768px) {
+  .about_us {
+    width: 100%;
+
+  .about_container {
+    width: 100%;
+  }
+
+  .about_container ol {
+    border-left: none;
+    padding: 0;
+  }
+
+  .about_container li {
+    margin: 0;
+    margin-bottom: 1rem;
+/*     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(15, 70, 5, 0.1)); */
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .about_container li:hover {
+    transform: scale(1.02);
+  }
+
+  .about_container li span.marker {
+    display: none;
+  }
+
+  .about_container h3 {
+    font-size: 1.2rem;
+  }
+
+  .about_container h3 span.question {
+    font-size: 1rem;
+  }
+
+  .about_container p {
+    font-size: 0.9rem;
+  }
+
+  .about_heading h2 {
+    font-size: 1.8rem;
+  }
 }
 
+/* Ecosystem Section */
+.ecosystem_section {
+  padding: 4%;
+  background: linear-gradient(180deg, transparent, rgba(50, 205, 50, 0.05), transparent);
+}
+  
+.ecosystem_section i {
+  border: 1px solid lime;
+}
 .ecosystem_heading {
   text-align: center;
   margin-bottom: 3rem;
@@ -445,14 +498,14 @@ body::before {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .ecosystem-card {
   background: var(--sidebar-background);
   border: var(--border);
   border-radius: 15px;
-  padding: 2rem;
+  padding: 12px;
   transition: all var(--transition-speed);
   position: relative;
   overflow: hidden;
@@ -492,6 +545,143 @@ body::before {
   color: var(--text-color);
   opacity: 0.9;
   line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .ecosystem-card {
+    display: flex;
+    flex-direction:column;
+    align-item: center;
+    justify-content: center;
+    width: 94%;
+  }
+  content-info {
+    display: flex;
+    align-etem: center;
+    justify-content: center;
+  }
+  .ecosystem_section i {
+    border: 1px solid lime;
+    broder-radius: 50%;
+    background: black
+  }
+}
+
+
+
+  .ecosystem_section {
+  padding: 4rem 2vw;
+  background: linear-gradient(135deg, var(--black-bg) 90%, #181818 100%);
+}
+
+.ecosystem_heading h2 {
+  text-align: center;
+  color: var(--lime);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  text-shadow: 0 0 16px var(--lime-glow);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+}
+
+.ecosystem_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.ecosystem-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow), 0 0 0 2px var(--lime);
+  padding: 2.2rem 1.5rem 1.8rem 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.22s, transform 0.22s;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  max-width: 340px;
+}
+
+.ecosystem-card::before {
+  content: "";
+  position: absolute;
+  top: -50px; left: -50px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, var(--lime-glow) 0%, transparent 70%);
+  filter: blur(14px);
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ecosystem-card:hover {
+  box-shadow: 0 16px 64px var(--lime-glow), 0 0 0 3px var(--lime-dark);
+  transform: translateY(-8px) scale(1.04);
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 58px; width: 58px;
+  background: var(--icon-bg);
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 0 16px var(--lime), 0 0 28px #111 inset;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.icon-wrapper i {
+  font-size: 2.4rem;
+  color: var(--lime);
+  text-shadow: 0 0 8px var(--lime-glow), 0 0 10px #111;
+  transition: color 0.2s;
+}
+
+.ecosystem-card:hover .icon-wrapper {
+  background: linear-gradient(135deg, #222 10%, var(--lime-glow) 90%);
+  box-shadow: 0 0 32px var(--lime), 0 0 24px var(--lime-glow);
+}
+
+h4 {
+  color: var(--lime);
+  font-size: 1.28rem;
+  font-weight: 700;
+  margin: 0.3rem 0;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 7px var(--lime-glow);
+}
+
+p {
+  color: var(--lime-dark);
+  font-size: 1.04rem;
+  opacity: 0.86;
+  margin: 0.12rem 0 0.2rem 0;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .ecosystem_section {
+    padding: 2.2rem 1vw;
+  }
+  .ecosystem_heading h2 {
+    font-size: 2rem;
+  }
+  .ecosystem-card {
+    padding: 1.4rem 1rem;
+    max-width: 100vw;
+  }
 }
 
 /* Team Section */
