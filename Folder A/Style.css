@@ -2688,6 +2688,7 @@ button.footer-label:hover {
             justify-content: space-between;
             align-items: center;
             padding: 0.75rem 0;
+            border-radius: 15px;
             border-bottom: 1px solid lime;
         }
 
