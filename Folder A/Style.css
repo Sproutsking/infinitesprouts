@@ -565,26 +565,7 @@ p {
     max-width: 90vw;
   }
 }
-
-:root {
-  /* Lime + Dark Tech Palette */
-  --lime: #39FF14;
-  --lime-glow: #00FF66;
-  --lime-accent: #BFFF00;
-  --lime-soft: #AEEA00;
-  --primary-color: var(--lime);
-  --secondary-color: var(--lime-glow);
-  --accent-color: var(--lime-accent);
-  --text-color: #fff;
-  --sidebar-background: #111418;
-  --card-bg: #181A1B;
-  --border-radius: 22px;
-  --border: 2px solid var(--lime);
-  --box-shadow-1: 0 12px 48px var(--lime-glow), 0 0 0 3px var(--lime-accent);
-  --shadow: 0 8px 32px rgba(57,255,20,0.22);
-  --icon-bg: linear-gradient(135deg, #181A1B 40%, var(--lime) 100%);
-  --transition-speed: 0.22s;
-}
+/* TEAM SECTIION  */
 
 .team-page {
   display: none;
