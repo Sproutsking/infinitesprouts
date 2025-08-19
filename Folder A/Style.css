@@ -1,30 +1,21 @@
 /* GLOBAL STYLES */
 :root {
-  /* Neon Lime Palette */
-  --lime: #39FF14;        /* Neon lime (main accent) */
-  --lime-glow: #00FF66;   /* Lime glow for effects */
-  --lime-accent: #BFFF00; /* Soft lime accent for gradients */
-  --lime-soft: #AEEA00;   /* Softer lime for backgrounds/text */
-
-  /* Dark Tech Palette */
-  --black: #000000;         /* Pure black for depth */
-  --dark: #121212;          /* Main dark background */
-  --darker: #181A1B;        /* Darker contrast for cards */
-  --card-bg: #181A1B;       /* Card background */
-  --card-bg-glass: rgba(24,26,27,0.93); /* Card glass effect */
-  --section-bg: linear-gradient(135deg, #000 85%, #181A1B 100%);
-
-  /* Effects */
+  --lime: #CFFF04;
+  --lime-dark: #AEEA00;
+  --lime-glow: #CFFF04;
+  --lime-accent: #B2FF59;
+  --black: #000;
+  --black-bg: #101010;
+  --card-bg: #151515e0;
   --border-radius: 22px;
-  --shadow: 0 8px 32px rgba(57,255,20,0.22);
-  --shadow-glow: 0 0 32px var(--lime-glow), 0 0 48px var(--lime) inset;
-  --icon-bg: linear-gradient(135deg, #181A1B 40%, var(--lime) 100%);
-  --card-border: 2px solid var(--lime);
-
-  /* Text */
+  --shadow: 0 8px 32px rgba(207,255,4,0.18);
+  --shadow-glow: 0 0 24px var(--lime-glow), 0 0 48px var(--lime) inset;
+  --icon-bg: linear-gradient(135deg, var(--black) 40%, var(--lime) 100%);
   --text-main: var(--lime);
-  --text-accent: var(--lime-accent);
+  --text-accent: var(--lime-dark);
+  --card-border: 2px solid var(--lime);
 }
+
 :root {
   --background-color: #000000;
   --text-color: #ffffff;
