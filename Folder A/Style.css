@@ -1,13 +1,19 @@
 /* GLOBAL STYLES */
 :root {
   --lime: #CFFF04;
-  --lime-dark: #B2FF59;
-  --lime-glow: #AEEA00;
-  --black-bg: #121212;
-  --card-bg: #181818e0;
-  --border-radius: 20px;
-  --shadow: 0 8px 32px rgba(200,255,4,0.13);
-  --icon-bg: linear-gradient(135deg, #222 40%, var(--lime) 100%);
+  --lime-dark: #AEEA00;
+  --lime-glow: #CFFF04;
+  --lime-accent: #B2FF59;
+  --black: #000;
+  --black-bg: #101010;
+  --card-bg: #151515e0;
+  --border-radius: 22px;
+  --shadow: 0 8px 32px rgba(207,255,4,0.18);
+  --shadow-glow: 0 0 24px var(--lime-glow), 0 0 48px var(--lime) inset;
+  --icon-bg: linear-gradient(135deg, var(--black) 40%, var(--lime) 100%);
+  --text-main: var(--lime);
+  --text-accent: var(--lime-dark);
+  --card-border: 2px solid var(--lime);
 }
 
 :root {
