@@ -1036,8 +1036,61 @@ body::before {
   }
 
   .hero-card {
+    margin: 0;
     width: 94%;
   }
+  .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.card-stats {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border: var(--border);
+  border-radius: 25px;
+}
+.card-title {
+  font-size: 16px;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.stat-label {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+.stat-value {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.card-footer {
+  text-align: center;
+}
 
   .farmers-grid, .team_container_content {
     grid-template-columns: 1fr;
@@ -1055,7 +1108,7 @@ body::before {
 
 /* Animations */
 .fade-in {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out forwards;
 }
 
 @keyframes fadeInUp {
