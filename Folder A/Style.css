@@ -2037,7 +2037,7 @@ body::before {
                 max-width: 90%;
                 padding: 10px;
                 border-radius: 20px;
-                background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+                background: var(--sidebar-background);
                 backdrop-filter: blur(15px);
                 border: 1px solid rgba(0, 255, 0, 0.3);
                 box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
