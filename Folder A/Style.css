@@ -1116,9 +1116,9 @@ body.light-theme .backgroundColor {
             .main-button-container {
                 gap: 20px;
                 padding: 0;
+                margin: 0;
                 margin-bottom: 34px;
                 justify-content: space-between;
-                   background: black;
             }
 
             .btn {
