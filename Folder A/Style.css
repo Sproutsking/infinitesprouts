@@ -517,13 +517,9 @@ body.light-theme .backgroundColor {
         }
 
         .main-content {
-               display: flex;
-               align-item: center;
-               justify-content: center;
-               flex-direction: column;
             position: relative;
             z-index: 10;
-            max-width: 76%;
+            max-width: 700px;
             flex: 1;
             text-align: left;
             animation: slideInMagnetic 2s cubic-bezier(0.23, 1, 0.320, 1);
@@ -583,8 +579,8 @@ body.light-theme .backgroundColor {
                 goldLevitate 6s ease-in-out infinite,
                 goldGlow 3s ease-in-out infinite;
             text-shadow: 
-                0 0 6px rgba(255, 215, 0, 0.8),
-                0 0 8px rgba(255, 215, 0, 0.5);
+                0 0 10px rgba(255, 215, 0, 0.8),
+                0 0 12px rgba(255, 215, 0, 0.5);
         }
 
         .gold::before {
@@ -600,7 +596,7 @@ body.light-theme .backgroundColor {
         }
 
         .main p {
-            margin-top: 38px;
+            margin-top: 30px;
             font-family: 'Poppins', sans-serif;
             font-size: 1.15rem;
             font-weight: 400;
@@ -609,14 +605,18 @@ body.light-theme .backgroundColor {
             color: rgba(255, 255, 255, 0.9);
         }
 
+        .main p:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 255, 0, 0.3), inset 0 0 30px rgba(255, 215, 0, 0.2);
+        }
+
         /* BUTTON STYLES */
         .main-button-container {
             display: flex;
             flex-direction: row;
             gap: 30px;
             margin-top: 40px;
-            align-item: center;
-            justify-content: center;
+            justify-content: flex-start;
             z-index: 20;
             animation: buttonsSlideIn 2s ease-out 1s both;
         }
@@ -2200,8 +2200,147 @@ button.footer-label:hover {
 
 
 
-    
-   
+
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+    :root {
+      --background-color: #000000;
+      --text-color: #ffffff;
+      --primary-color: lime;
+      --secondary-color: #c8ff00;
+      --accent-color: gold;
+      --button-background: #000000;
+      --button-text-color: lime;
+      --popup-background: #ffffff;
+      --popup-text-color: #000000;
+      --active-color: lime;
+      --danger-color: #ff0000;
+      --message-limit-color: #ff4d4d;
+      --transition-speed: 0.3s;
+      --close-button: red;
+      --sidebar-background: #000000;
+      --sidebar-gradient-1: #000000;
+      --sidebar-gradient-2: #000000;
+      --box-shadow: 2px 2px 4px #2b2b2b, -2px -2px 4px #2b2b2b;
+      --box-shadow-1: 0 0 4px 1px lime;
+      --border: 1px solid #3c3c3c;
+      --dot-bg: #000000;
+      --dot-color: rgba(255, 255, 255, 0.5);
+      --dot-size: 2px;
+      --dot-space: 20px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      background: var(--background-color);
+      color: var(--text-color);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .backgroundColor {
+      background:
+        radial-gradient(800px circle at center 10px, var(--primary-color), #031801, #021101, 35%, transparent 51%),
+        radial-gradient(800px circle at right center, var(--secondary-color), #08290e, #051606, 36%, transparent 50.4%),
+        radial-gradient(1400px circle at 20px bottom, var(--accent-color), #033307, #022707, 36%, transparent 51%),
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+      background-color: #00000056;
+      background-attachment: fixed;
+      animation: pulseDots 3s ease-in-out infinite;
+    }
+
+    @keyframes pulseDots {
+      0%, 100% { background-color: #00000056; }
+      50% { background-color: #00000080; }
+    }
+
+    /* Your existing styles would go here - I'm adding basic demo styles */
+    .main {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .main-content {
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .main-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .intro-green {
+      color: var(--primary-color);
+    }
+
+    .gold {
+      color: var(--accent-color);
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      color: #ccc;
+    }
+
+    .main-button-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn.yellow {
+      background: linear-gradient(145deg, var(--accent-color), #ffdd00);
+      color: #000;
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+    }
+
+    .btn.yellow:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(255, 215, 0, 0.5);
+    }
+
+    .btn.green {
+      background: linear-gradient(145deg, var(--primary-color), #00ff00);
+      color: #000;
+      box-shadow: 0 8px 20px rgba(0, 255, 0, 0.3);
+    }
+
+    .btn.green:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0, 255, 0, 0.5);
+    }
+
     /* COMING SOON POPUP STYLES - ONLY NEW ADDITIONS */
     .coming-soon-overlay {
       position: fixed;
@@ -2543,5 +2682,14 @@ button.footer-label:hover {
         width: 35px;
         height: 35px;
         font-size: 16px;
+      }
+
+      .main-content h1 {
+        font-size: 2rem;
+      }
+
+      .main-button-container {
+        flex-direction: column;
+        align-items: center;
       }
     }
