@@ -126,5 +126,137 @@ closePopup.addEventListener('click', () => {
   popup.style.display = 'none';
 });
 
+
+
+
+// Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // Popup functionality
+        const popup = document.getElementById('popup');
+        const getStartedBtns = [
+            document.getElementById('getStartedBtn'),
+            document.getElementById('getStartedBtn2')
+        ];
+        const closePopupBtn = document.getElementById('closePopup');
+
+        // Show popup
+        getStartedBtns.forEach(btn => {
+            if (btn) {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    popup.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+        });
+
+        // Close popup
+        function closePopup() {
+            popup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        if (closePopupBtn) {
+            closePopupBtn.addEventListener('click', closePopup);
+        }
+
+        // Close popup on overlay click
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
+
+        // Close popup on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popup.classList.contains('active')) {
+                closePopup();
+            }
+        });
+
+        // Navigation active state
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        function updateActiveNav() {
+            const scrollPosition = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe animated elements
+        document.querySelectorAll('[style*="animation"]').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Performance optimization: Debounce scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        const debouncedScrollHandler = debounce(() => {
+            updateActiveNav();
+        }, 10);
+
+        window.addEventListener('scroll', debouncedScrollHandler);
+
+
+
+
 // Initialize main page on load
 showMainPage('#main_section');
