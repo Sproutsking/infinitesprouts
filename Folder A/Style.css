@@ -427,7 +427,7 @@ body::before {
 @media (max-width: 768px) {
 
   .about_container {
-    width: 95%;
+    width: 100%;
   }
 
   .about_container ol {
@@ -438,7 +438,7 @@ body::before {
   .about_container li {
     margin: 0;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(15, 70, 5, 0.1));
+/*     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(15, 70, 5, 0.1)); */
     border: 1px solid var(--primary-color);
     border-radius: 8px;
     padding: 12px;
