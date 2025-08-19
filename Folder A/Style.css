@@ -2156,6 +2156,7 @@ body::before {
             }
 
             .main p {
+              width: 90%;
                 font-size: 1rem;
                 padding: 18px;
             }
