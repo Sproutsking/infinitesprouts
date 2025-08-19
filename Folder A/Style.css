@@ -350,7 +350,7 @@ body::before {
 
 /* About Section */
 .about_us {
-  padding: 4%;
+  padding: 5%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -543,7 +543,10 @@ body::before {
   opacity: 0.9;
   line-height: 1.6;
 }
-
+@media (max-width: 768px) {
+  .ecosystem-card {
+    width: 94%;
+  }
 /* Team Section */
 .team-page {
   display: none;
