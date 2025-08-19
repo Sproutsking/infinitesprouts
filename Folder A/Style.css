@@ -1083,6 +1083,19 @@ p {
     width: 100%;
     max-width: 400px;
   }
+
+  .farmers-grid, .team_container_content {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .main-button-container {
+    justify-content: center;
+  }
+
+  .subscribe-now-content {
+    flex-direction: column;
+  }
   .card-stats {
   display: grid;
   gap: 6px;
@@ -1112,19 +1125,6 @@ p {
   font-weight: bold;
   font-size: 12px;
 }
-
-  .farmers-grid, .team_container_content {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-
-  .main-button-container {
-    justify-content: center;
-  }
-
-  .subscribe-now-content {
-    flex-direction: column;
-  }
 }
 
 
