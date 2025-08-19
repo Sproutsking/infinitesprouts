@@ -2633,7 +2633,7 @@ button.footer-label:hover {
             backdrop-filter: blur(20px);
             border: 1px solid var(--border-subtle);
             border-radius: 24px;
-            padding: 2.5rem;
+            padding: 12px;
             margin-bottom: 20px;
             box-shadow: var(--shadow-strong);
             animation: floatUp 1.2s ease-out 0.3s both;
@@ -2681,6 +2681,7 @@ button.footer-label:hover {
         .card-stats {
             display: grid;
             gap: 1rem;
+            
         }
 
         .stat-item {
@@ -2893,7 +2894,7 @@ button.footer-label:hover {
             }
 
             .hero-card {
-                max-width: 400px;
+                width: 90%;
                 margin: 0 auto;
                 margin-bottom: 20px;
             }
