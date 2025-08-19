@@ -1013,6 +1013,9 @@ body.light-theme .backgroundColor {
 
         /* MEDIA QUERIES */
         @media (max-width: 1000px) {
+            .main_container {
+                padding-top: 150px;
+            }
             .floating-message-card {
                 height: 150px;
                 width: 250px;
@@ -1047,6 +1050,9 @@ body.light-theme .backgroundColor {
                     linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                     linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                     var(--dot-color);
+            }
+            .main_container {
+                padding-top: 150px;
             }
 
             body.light-theme .main {
@@ -1135,6 +1141,9 @@ body.light-theme .backgroundColor {
                     linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                     linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                     var(--dot-color);
+            }
+            .main_container {
+                padding-top: 150px;
             }
 
             body.light-theme .main {
