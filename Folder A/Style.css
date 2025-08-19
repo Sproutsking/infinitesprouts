@@ -568,8 +568,7 @@ p {
 }
 
 /* Team Section */
-:root {
-  /* Lime + Dark Tech Palette */
+/* :root {
   --lime: #39FF14;
   --lime-glow: #00FF66;
   --lime-accent: #BFFF00;
@@ -587,7 +586,7 @@ p {
   --icon-bg: linear-gradient(135deg, #181A1B 40%, var(--lime) 100%);
   --transition-speed: 0.22s;
 }
-
+ */
 .team-page {
   display: none;
   min-height: 100vh;
