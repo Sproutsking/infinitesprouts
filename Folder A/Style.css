@@ -1021,13 +1021,7 @@ body.light-theme .backgroundColor {
         /* MEDIA QUERIES */
         @media (max-width: 1000px) {
             .main_container {
-                padding-top: 150px;
-            }
-            .floating-message-card {
-                height: 150px;
-                width: 250px;
-                top: 45%;
-                right: 5%;
+                padding-top: 100px;
             }
 
             .card-back img {
@@ -1075,14 +1069,14 @@ body.light-theme .backgroundColor {
             .main_container {
                 flex-direction: column;
                 align-items: center;
-                margin: 0 auto;
+                margin: 0;
                 width: 90%;
             }
 
             .main-content {
                 display: flex;
                 width: 100%;
-                margin: 0 auto;
+                margin: 0;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
@@ -1104,15 +1098,13 @@ body.light-theme .backgroundColor {
             .main p {
                 font-size: 1.1rem;
                 max-width: 90%;
-                padding: 20px;
+                padding: 10px;
                 border-radius: 20px;
                 background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(255, 215, 0, 0.2), rgba(0, 0, 0, 0.4));
                 backdrop-filter: blur(15px);
                 border: 1px solid rgba(0, 255, 0, 0.3);
                 box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
                 animation: glassPulse 4s ease-in-out infinite;
-                margin-left: auto;
-                margin-right: auto;
             }
 
             .main p:hover {
@@ -1145,7 +1137,7 @@ body.light-theme .backgroundColor {
                     var(--dot-color);
             }
             .main_container {
-                padding-top: 80px;
+                padding-top: 70px;
             }
 
             body.light-theme .main {
@@ -1220,12 +1212,6 @@ body.light-theme .backgroundColor {
             .main p {
                 font-size: 0.9rem;
                 padding: 16px;
-            }
-
-            .btn {
-                padding: 12px 24px;
-                font-size: 1rem;
-                letter-spacing: 1px;
             }
         }
 
