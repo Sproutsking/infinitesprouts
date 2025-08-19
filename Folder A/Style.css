@@ -1217,6 +1217,14 @@ body.light-theme .backgroundColor {
                 font-size: 0.9rem;
                 padding: 16px;
             }
+               .btn {
+                display: flex;
+                font-size: 12px;
+                width: 85%;
+                flex-direction:column;
+                text-align: center;
+                padding: 14px 20px;
+            }
         }
 
         @media (max-width: 400px) {
@@ -1266,8 +1274,10 @@ body.light-theme .backgroundColor {
             }
 
             .btn {
+                display: flex;
                 font-size: 12px;
                 width: 85%;
+                flex-direction:column;
                 text-align: center;
                 padding: 14px 20px;
             }
