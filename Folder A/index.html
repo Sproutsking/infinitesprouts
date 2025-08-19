@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!-- <link rel="stylesheet" href="Style.css"/> -->
-  <title>Infinite Sprouts</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="Style.css">
-</head>
 <body class="backgroundColor dark-theme">
+  <!-- Cyber Grid and Neural Network Overlays -->
+  <div class="cyber-grid"></div>
+  <div class="neural-network"></div>
+
+  <!-- Landing Page -->
   <div class="landing-page active">
     <header class="header main-header">
       <a href="#main_section" class="logo">
@@ -41,7 +21,8 @@
             <li><a class="nav-link" href="#about" id="about-link">About Us</a></li>
             <li><a class="nav-link" href="#ecosystem_section" id="ecosystem">Ecosystem</a></li>
             <li><a class="nav-link" href="#team_section" id="team-link">Our Team</a></li>
-            <li><a class="goto" href="https://infinite-sprouts.gitbook.io/infinite-sprout/road-map/phase-1-base-era." target="_blank">Road Map</a></li>
+            <li><a class="nav-link" href="#farmers_section" id="farmers-link">Our Farmers</a></li>
+            <li><a class="goto" href="https://infinite-sprouts.gitbook.io/infinite-sprout/road-map/phase-1-base-era" target="_blank">Road Map</a></li>
             <li><a class="goto" href="https://infinite-sprouts.gitbook.io/infinite-sprout" target="_blank">Gitbook</a></li>
           </ul>
           <ul class="social-icon" id="social-icon">
@@ -67,89 +48,33 @@
             revolutionizing the agricultural landscape.
           </p>
           <div class="main-button-container">
-              <a href="#" class="btn yellow" id="getStartedBtn"><i class="fas fa-rocket"></i>Get Started</a>
-              <a href="#about" class="btn green"><i class="fas fa-leaf"></i>Learn More</a>
+            <a href="#" class="btn yellow" id="getStartedBtn"><i class="fas fa-rocket"></i>Get Started</a>
+            <a href="#about" class="btn green"><i class="fas fa-leaf"></i>Learn More</a>
           </div>
         </div>
         <div class="hero-card">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <div>
-                        <div class="card-title">AgriTech Platform</div>
-                    </div>
-                </div>
-                
-                <div class="card-stats">
-    <div class="stat-item">
-        <span class="stat-label">Active Farmers</span>
-        <span class="stat-value">30+</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-label">Blockchain Network</span>
-        <span class="stat-value">Live</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-label">AI Integration</span>
-        <span class="stat-value">Under Development</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-label">Farm Size</span>
-        <span class="stat-value">20 Hectares</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-label">Storage Capacity</span>
-        <span class="stat-value">100 Tonnes</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-label">Projected Annual Revenue</span>
-        <span class="stat-value">$500,000</span>
-    </div>
-</div>
-                
-                <div class="card-footer">
-                    <div class="tech-indicators">
-                        <div class="tech-dot"></div>
-                        <div class="tech-dot"></div>
-                        <div class="tech-dot"></div>
-                    </div>
-                </div>
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-seedling"></i></div>
+            <div><div class="card-title">AgriTech Platform</div></div>
+          </div>
+          <div class="card-stats">
+            <div class="stat-item"><span class="stat-label">Active Farmers</span><span class="stat-value">30+</span></div>
+            <div class="stat-item"><span class="stat-label">Blockchain Network</span><span class="stat-value">Live</span></div>
+            <div class="stat-item"><span class="stat-label">AI Integration</span><span class="stat-value">Under Development</span></div>
+            <div class="stat-item"><span class="stat-label">Farm Size</span><span class="stat-value">20 Hectares</span></div>
+            <div class="stat-item"><span class="stat-label">Storage Capacity</span><span class="stat-value">100 Tonnes</span></div>
+            <div class="stat-item"><span class="stat-label">Projected Annual Revenue</span><span class="stat-value">$500,000</span></div>
+          </div>
+          <div class="card-footer">
+            <div class="tech-indicators">
+              <div class="tech-dot"></div>
+              <div class="tech-dot"></div>
+              <div class="tech-dot"></div>
             </div>
-    </section>
-    <!-- Coming Soon Popup -->
-    <div class="popup-overlay" id="popup">
-        <div class="popup-content">
-            <button class="popup-close" id="closePopup">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <div class="popup-icon">
-                <i class="fas fa-rocket"></i>
-            </div>
-            
-            <h2 class="popup-title">Coming Soon</h2>
-            <p class="popup-text">
-                Our revolutionary blockchain and AI-powered agricultural ecosystem is being 
-                engineered to transform farming forever. Get ready for the future.
-            </p>
-            
-            <div class="popup-social">
-                <a href="#" class="social-link" aria-label="Discord">
-                    <i class="fab fa-discord"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://infinite-sprouts.gitbook.io/infinite-sprout" class="social-link" target="_blank" aria-label="Documentation">
-                    <i class="fas fa-book"></i>
-                </a>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
     <section class="card-section">
         <h2 class="section-title">Our Trusted Partners</h2>
@@ -387,26 +312,22 @@
           <li>
             <span class="marker">🌱</span>
             <h3>Question 1: <span class="question">What is Infinite Sprouts?</span></h3>
-            <p>Infinite Sprouts is a visionary ecosystem powered by AI, IoT, and Blockchain,
-            aiming to expand the scale and consciousness of agriculture through its seven-point agenda.
-            It is a unified ecosystem for everyone.</p>
+            <p>Infinite Sprouts is a visionary ecosystem powered by AI, IoT, and Blockchain, aiming to expand the scale and consciousness of agriculture through its seven-point agenda. It is a unified ecosystem for everyone.</p>
           </li>
           <li>
             <span class="marker">🌱</span>
             <h3>Question 2: <span class="question">What is the vision?</span></h3>
-            <p>We envision a future where agriculture runs seamlessly on Blockchain,
-            creating an ecosystem that provides solutions for farmers and an efficient investment platform for investors.
-            This allows anyone, anywhere, to contribute to and benefit from agriculture through our staking protocol.</p>
+            <p>We envision a future where agriculture runs seamlessly on Blockchain, creating an ecosystem that provides solutions for farmers and an efficient investment platform for investors.</p>
           </li>
           <li>
             <span class="marker">🌱</span>
             <h3>Question 3: <span class="question">What is the goal?</span></h3>
-            <p>Our goal is to ensure the long-term survival of humanity on Earth by supporting farmers to scale and address daily challenges in their farming activities. We also aim to enable anyone, anywhere, to invest in or contribute to agriculture and benefit from it.</p>
+            <p>Our goal is to ensure the long-term survival of humanity by supporting farmers to scale and address daily challenges in their farming activities.</p>
           </li>
           <li>
             <span class="marker">🌱</span>
             <h3>Question 4: <span class="question">What is the mission?</span></h3>
-            <p>Our mission is to build a decentralized platform that helps farmers grow and enables anyone to contribute-tailored to and benefit from agriculture.</p>
+            <p>Our mission is to build a decentralized platform that helps farmers grow and enables anyone to contribute to and benefit from agriculture.</p>
           </li>
         </ol>
       </div>
@@ -421,49 +342,49 @@
           <div class="content-info">
             <i class="fas fa-globe"></i>
             <h4>Sproutlink</h4>
-            <p>A global network connecting farmers worldwide to share insights and grow together in a digital, free, fair, and unified ecosystem.</p>
+            <p>A global network connecting farmers worldwide to share insights and grow together.</p>
           </div>
         </div>
         <div class="ecosystem-card">
           <div class="content-info">
             <i class="fas fa-tractor"></i>
             <h4>Sprout Farm</h4>
-            <p>Sprout Farm is our agenda to engage in large-scale farming of ginger, rice, corn, palm oil, and cocoa, generating significant revenue for our ecosystem.</p>
+            <p>Engages in large-scale farming of ginger, rice, corn, palm oil, and cocoa.</p>
           </div>
         </div>
         <div class="ecosystem-card">
           <div class="content-info">
             <i class="fas fa-link"></i>
             <h4>Sprouts Exchange</h4>
-            <p>Sprouts Exchange is one of our agendas that brings farmers into the new age, allowing them to participate in the Web3 economy.</p>
+            <p>Brings farmers into the Web3 economy, enabling participation in digital markets.</p>
           </div>
         </div>
         <div class="ecosystem-card">
           <div class="content-info">
             <i class="fas fa-flask"></i>
             <h4>SproutsLabs</h4>
-            <p>A hub for development and innovation, SproutsLabs is a protocol that insists every farmer is heard and attended to effectively. With SproutsLabs, farmers can report sudden problems on their farms and receive faster responses.</p>
+            <p>A hub for innovation, ensuring farmers' issues are addressed promptly.</p>
           </div>
         </div>
         <div class="ecosystem-card">
           <div class="content-info">
             <i class='bx bx-line-chart'></i>
             <h4>SproutStake</h4>
-            <p>An investment protocol where users stake tokens to earn passive income from our ecosystem, with revenue from farming, storage, lending to farmers, and the platform.</p>
+            <p>An investment protocol for earning passive income from farming revenue.</p>
           </div>
         </div>
         <div class="ecosystem-card">
           <div class="content-info">
             <i class="fas fa-warehouse"></i>
             <h4>Sprouts Bank</h4>
-            <p>A financial platform offering tailored services like loans and savings for agriculture.</p>
+            <p>Offers financial services like loans and savings tailored for agriculture.</p>
           </div>
         </div>
         <div class="ecosystem-card">
           <div class="content-info">
             <i class="fas fa-wallet"></i>
             <h4>Sprouts Wallet</h4>
-            <p>A user-friendly wallet for managing crop tokens, staking rewards, and transactions.</p>
+            <p>A user-friendly wallet for managing crop tokens and transactions.</p>
           </div>
         </div>
       </div>
@@ -473,7 +394,7 @@
       <div class="footer-container">
         <div class="footer-column">
           <h3>Infinite Sprouts</h3>
-          <p>Revolutionizing agriculture with AI, IoT, and Blockchain. Join our ecosystem to connect farmers, traders, and investors globally.</p>
+          <p>Revolutionizing agriculture with AI, IoT, and Blockchain. Join our ecosystem.</p>
           <ul class="footer-social-icon">
             <li><a href="#"><i class='bx bxl-google'></i></a></li>
             <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
@@ -487,6 +408,7 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#ecosystem_section">Ecosystem</a></li>
             <li><a href="#team_section">Our Team</a></li>
+            <li><a href="#farmers_section">Our Farmers</a></li>
             <li><a href="https://infinite-sprouts.gitbook.io/infinite-sprout" target="_blank">Gitbook</a></li>
           </ul>
         </div>
@@ -507,6 +429,7 @@
     </section>
   </div>
 
+  <!-- Team Page -->
   <div class="team-page">
     <header class="header team-header">
       <a href="#main_section" class="logo">
@@ -520,15 +443,19 @@
       <div class="header-content">
         <div class="header-content-details">
           <ul>
-            <li><a class="nav-link" href="#main_section" id="home-link-team">Home</a></li>
-            <li><a class="nav-link" href="#about" id="about-link-team">About Us</a></li>
-            <li><a class="nav-link" href="#ecosystem_section" id="ecosystem-team">Ecosystem</a></li>
-            <li><a class="nav-link active" href="#team_section" id="team-link-team">Our Team</a></li>
-            <li><a class="goto" href="https://infinite-sprouts.gitbook.io/infinite-sprout/road-map/phase-1-starting-era" target="_blank">Road Map</a></li>
+            <li><a class="nav-link active" href="#main_section" id="home-link">Home</a></li>
+            <li><a class="nav-link" href="#about" id="about-link">About Us</a></li>
+            <li><a class="nav-link" href="#ecosystem_section" id="ecosystem">Ecosystem</a></li>
+            <li><a class="nav-link" href="#team_section" id="team-link">Our Team</a></li>
+            <li><a class="nav-link" href="#farmers_section" id="farmers-link">Our Farmers</a></li>
+            <li><a class="goto" href="https://infinite-sprouts.gitbook.io/infinite-sprout/road-map/phase-1-base-era" target="_blank">Road Map</a></li>
             <li><a class="goto" href="https://infinite-sprouts.gitbook.io/infinite-sprout" target="_blank">Gitbook</a></li>
-            <li><a class="goto" href="https://infinite-sprouts-development.up.railway.app" target="_blank">Platform</a></li>
-            <li><a href="#" class="theme-toggle_switch"><i class='bx bx-moon'></i></a></li>
           </ul>
+          <ul class="social-icon" id="social-icon">
+             <li><a href="#"><i class='bx bxl-discord-alt'></i></a></li>
+             <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+             <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+         </ul>
         </div>
       </div>
     </header>
@@ -741,18 +668,1062 @@
       </div>
     </section>
     </section>
-
-    
   </div>
 
-  <div class="popup" id="popup">
+  <!-- Farmers Page -->
+  <div class="farmers-page">
+    <header class="header farmers-header">
+      <a href="#main_section" class="logo">
+        <img src="./Assets folder/Infinite Logo_cut.png" alt="Logo" loading="lazy">
+      </a>
+      <input type="checkbox" id="main-check-farmers">
+      <label for="main-check-farmers" class="menu-icon">
+        <i class='bx bx-menu' id="open-menu"></i>
+        <i class='bx bx-x' id="close-menu"></i>
+      </label>
+      <div class="header-content">
+        <div class="header-content-details">
+          <ul>
+            <li><a class="nav-link" href="#main_section" id="home-link-farmers">Home</a></li>
+            <li><a class="nav-link" href="#about" id="about-link-farmers">About Us</a></li>
+            <li><a class="nav-link" href="#ecosystem_section" id="ecosystem-farmers">Ecosystem</a></li>
+            <li><a class="nav-link" href="#team_section" id="team-link-farmers">Our Team</a></li>
+            <li><a class="nav-link active" href="#farmers_section" id="farmers-link-farmers">Our Farmers</a></li>
+            <li><a class="goto" href="https://infinite-sprouts.gitbook.io/infinite-sprout/road-map/phase-1-base-era" target="_blank">Road Map</a></li>
+            <li><a class="goto" href="https://infinite-sprouts.gitbook.io/infinite-sprout" target="_blank">Gitbook</a></li>
+            <li><a class="goto" href="https://infinite-sprouts-development.up.railway.app" target="_blank">Platform</a></li>
+          </ul>
+          <ul class="social-icon" id="social-icon">
+            <li><a href="#"><i class='bx bxl-discord-alt'></i></a></li>
+            <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+            <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="farmers_section" id="farmers_section">
+        <div class="farmers_container">
+            <div class="farmers_heading">
+                <h2>Our Farmers</h2>
+            </div>
+            <div class="farmers-grid">
+                <!-- Farmer 1 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop" alt="Kirah Kano">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Kirah Kano</div>
+                        <div class="crop-type">Ginger</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">12 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">8 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">45 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$68,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge high-roi">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 2 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=400&h=300&fit=crop" alt="Helen Mike">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Helen Mike</div>
+                        <div class="crop-type">Rice</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">15 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">12 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">65 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$85,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 3 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Fukon Ishaya Kato">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Fukon Ishaya Kato</div>
+                        <div class="crop-type">Corn</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">9 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">7 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">42 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$58,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 4 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop" alt="Markus Bitrus">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Markus Bitrus</div>
+                        <div class="crop-type">Ginger</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">17 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">10 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">50 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$75,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge high-roi">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 5 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=300&fit=crop" alt="Moses Barnabas">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Moses Barnabas</div>
+                        <div class="crop-type">Soybean</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">13 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">9 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">36 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$52,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 6 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=400&h=300&fit=crop" alt="Enoch Iliya">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Enoch Iliya</div>
+                        <div class="crop-type">Cassava</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">11 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">6 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">80 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$40,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 7 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=400&h=300&fit=crop" alt="Kato Haruna">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Kato Haruna</div>
+                        <div class="crop-type">Rice</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">8 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">5 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">28 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$38,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 8 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Ebenezer Elisha Jock">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Ebenezer Elisha Jock</div>
+                        <div class="crop-type">Yam</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">14 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">11 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">55 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$72,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge high-roi">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 9 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Emmanuel Gamalia">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Emmanuel Gamalia</div>
+                        <div class="crop-type">Corn</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">7 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">6 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">35 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$48,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 10 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=300&fit=crop" alt="Nathan Monday">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Nathan Monday</div>
+                        <div class="crop-type">Soybean</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">10 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">8 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">32 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$46,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 11 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="David Daniel Ezekiel">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">David Daniel Ezekiel</div>
+                        <div class="crop-type">Yam</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">16 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">13 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">68 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$89,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge high-roi">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 12 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=400&h=300&fit=crop" alt="Christopher Haruna">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Christopher Haruna</div>
+                        <div class="crop-type">Rice</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">12 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">9 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">48 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$62,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 13 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=400&h=300&fit=crop" alt="Precious Tambaya">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Precious Tambaya</div>
+                        <div class="crop-type">Sesame</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">6 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">4 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">8 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$35,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 14 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=400&h=300&fit=crop" alt="Shedduwa Jonah">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Shedduwa Jonah</div>
+                        <div class="crop-type">Cassava</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">9 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">7 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">95 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$47,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 15 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Jacob Bawa">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Jacob Bawa</div>
+                        <div class="crop-type">Corn</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">11 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">8 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">48 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$66,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 16 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=300&fit=crop" alt="Dorcas Luka">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Dorcas Luka</div>
+                        <div class="crop-type">Soybean</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">8 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">5 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">20 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$29,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 17 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=400&h=300&fit=crop" alt="Saidu Sani">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Saidu Sani</div>
+                        <div class="crop-type">Rice</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">18 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">15 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">82 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$105,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge high-roi">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 18 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Felix Joshua">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Felix Joshua</div>
+                        <div class="crop-type">Yam</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">13 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">10 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">52 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$68,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 19 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Fidelis Yakubu">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Fidelis Yakubu</div>
+                        <div class="crop-type">Corn</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">9 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">6 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">36 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$49,500</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 20 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop" alt="Elisha Adekule">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Elisha Adekule</div>
+                        <div class="crop-type">Ginger</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">14 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">11 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">58 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$87,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge high-roi">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 21 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=300&fit=crop" alt="Emmanuel Tijani">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Emmanuel Tijani</div>
+                        <div class="crop-type">Soybean</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">7 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">5 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">22 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$32,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 22 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=400&h=300&fit=crop" alt="Christopher Dogara Dowson">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Christopher Dogara Dowson</div>
+                        <div class="crop-type">Sesame</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">10 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">7 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">14 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$61,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 23 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=400&h=300&fit=crop" alt="Thomas Adamu Makama">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Thomas Adamu Makama</div>
+                        <div class="crop-type">Cassava</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">16 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">12 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">168 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$84,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge high-roi">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 24 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=400&h=300&fit=crop" alt="Gloria Irimia">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Gloria Irimia</div>
+                        <div class="crop-type">Sesame</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">5 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">3 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">6 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$26,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 25 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Anthony Dogara Dowson">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Anthony Dogara Dowson</div>
+                        <div class="crop-type">Yam</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">12 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">9 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">45 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$59,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 26 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=400&h=300&fit=crop" alt="Samuel Ezekiel Daniel">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Samuel Ezekiel Daniel</div>
+                        <div class="crop-type">Rice</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">11 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">8 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">44 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$57,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Additional Farmers 27-30 to reach 30 total -->
+                <!-- Farmer 27 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop" alt="Dakachi Gere">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Dakachi Gere</div>
+                        <div class="crop-type">Ginger</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">11 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">8 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">40 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$60,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 28 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Dakachi Gora">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Dakachi Gora</div>
+                        <div class="crop-type">Corn</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">6 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">5 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">30 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$45,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 29 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=300&fit=crop" alt="Bitrus Markus">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Bitrus Markus</div>
+                        <div class="crop-type">Soybean</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">17 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">10 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">50 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$75,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge high-roi">Verified</span>
+                    </div>
+                </div>
+
+                <!-- Farmer 30 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=400&h=300&fit=crop" alt="Joshua Musa">
+                    </div>
+                    <div class="farmer-info">
+                        <div class="farmer-name">Joshua Musa</div>
+                        <div class="crop-type">Cassava</div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Experience</div>
+                                <div class="info-value">8 Years</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Farm Size</div>
+                                <div class="info-value">6 Hectares</div>
+                            </div>
+                        </div>
+                        <div class="revenue-section">
+                            <div class="revenue-item">
+                                <span class="revenue-label">Last Season Yield</span>
+                                <span class="revenue-value">78 Tonnes</span>
+                            </div>
+                            <div class="revenue-item">
+                                <span class="revenue-label">Revenue</span>
+                                <span class="revenue-value positive">$39,000</span>
+                            </div>
+                        </div>
+                        <!-- <button class="investment-btn">Invest Now</button> -->
+                        <span class="roi-badge">Verified</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+        </div>
+        <div class="main-button-container">
+          <a href="#main_section" class="btn green" id="back-to-home-farmers">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Coming Soon Popup -->
+  <div class="popup-overlay" id="popup">
     <div class="popup-content">
-      <h3>Subscription Successful!</h3>
-      <p>You have successfully subscribed to our newsletter.</p>
-      <button id="close_popup">Close</button>
+      <button class="popup-close" id="closePopup"><i class="fas fa-times"></i></button>
+      <div class="popup-icon"><i class="fas fa-rocket"></i></div>
+      <h2 class="popup-title">Coming Soon</h2>
+      <p class="popup-text">
+        Our revolutionary blockchain and AI-powered agricultural ecosystem is being engineered to transform farming forever. Get ready for the future.
+      </p>
+      <div class="popup-social">
+        <a href="#" class="social-link" aria-label="Discord"><i class="fab fa-discord"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://infinite-sprouts.gitbook.io/infinite-sprout" class="social-link" target="_blank" aria-label="Documentation"><i class="fas fa-book"></i></a>
+      </div>
     </div>
   </div>
-
-</body>
-    <script src="Index.js"></script>
-</html>
