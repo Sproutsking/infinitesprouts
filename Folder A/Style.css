@@ -1,16 +1,5 @@
 /* GLOBAL STYLES */
 :root {
-  --lime: #CFFF04;
-  --lime-dark: #B2FF59;
-  --lime-glow: #AEEA00;
-  --black-bg: #121212;
-  --card-bg: #181818e0;
-  --border-radius: 20px;
-  --shadow: 0 8px 32px rgba(200,255,4,0.13);
-  --icon-bg: linear-gradient(135deg, #222 40%, var(--lime) 100%);
-}
-
-:root {
   --background-color: #000000;
   --text-color: #ffffff;
   --primary-color: lime;
@@ -547,7 +536,7 @@ p {
   }
   .ecosystem-card {
     padding: 1.4rem 1rem;
-    max-width: 90vw;
+    max-width: 100vw;
   }
 }
 
@@ -668,103 +657,6 @@ p {
   color: var(--primary-color);
   text-shadow: 0 0 10px var(--primary-color);
 }
-
-
-
-.team_container_content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-}
-
-.team-cards {
-  background: var(--card-bg);
-  border-radius: var(--border-radius, 22px);
-  box-shadow: var(--shadow, 0 8px 32px rgba(200,255,4,0.10)), 0 0 0 2px var(--lime, #CFFF04);
-  padding: 2rem 1.2rem 1.4rem 1.2rem;
-  text-align: center;
-  transition: box-shadow 0.22s, transform 0.22s;
-  position: relative;
-  overflow: hidden;
-  min-width: 0;
-  width: 100%;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* For consistent height across cards */
-  min-height: 370px;
-}
-
-.team-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-  z-index: 1;
-}
-
-.icon-img {
-  width: 92px;
-  height: 92px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--lime, #CFFF04);
-  box-shadow: 0 0 16px var(--lime-glow, #AEEA00), 0 0 32px #111 inset;
-  background: var(--icon-bg, linear-gradient(135deg, #222 40%, #CFFF04 100%));
-  transition: box-shadow 0.2s, border-color 0.2s;
-}
-
-.team-cards:hover .icon-img {
-  border-color: var(--lime-glow, #AEEA00);
-  box-shadow: 0 0 32px var(--lime, #CFFF04), 0 0 24px var(--lime-glow, #AEEA00);
-}
-
-/* Ensures all .team-cards are the same height, even if content is short */
-.team-cards .content-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-/* Responsive Tweaks */
-@media (max-width: 900px) {
-  .team_container_content {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.3rem;
-  }
-  .team-cards {
-    padding: 1.2rem 0.5rem;
-    max-width: 100vw;
-    min-height: 300px;
-  }
-  .icon-img {
-    width: 64px;
-    height: 64px;
-  }
-}
-@media (max-width: 600px) {
-  .team_section {
-    padding: 2rem 0.5vw;
-  }
-  .team_heading h2 {
-    font-size: 1.5rem;
-  }
-  .team-cards {
-    padding: 0.8rem 0.2rem;
-    min-height: 220px;
-  }
-  .icon-img {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-
-
 
 /* Farmers Section */
 .farmers-page {
@@ -2141,7 +2033,7 @@ p {
                 flex-direction: column;
                 align-items: center;
                 margin: 0;
-                width: 100%;
+                width: 90%;
             }
 
             .main-content {
@@ -2172,7 +2064,7 @@ p {
                 max-width: 90%;
                 padding: 10px;
                 border-radius: 20px;
-                background: var(--sidebar-background);
+                background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(255, 215, 0, 0.2), rgba(0, 0, 0, 0.4));
                 backdrop-filter: blur(15px);
                 border: 1px solid rgba(0, 255, 0, 0.3);
                 box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
@@ -2185,18 +2077,15 @@ p {
             }
 
             .main-button-container {
-                display: flex;
-                flex-direction: column;
                 gap: 20px;
                 padding: 0;
-                margin: 0;
-                margin-bottom: 10px;
+                margin-bottom: 34px;
                 justify-content: space-between;
             }
 
             .btn {
                 padding: 14px 28px;
-                font-size: 12px;
+                font-size: 10px;
                 width: 40%;
             }
         }
