@@ -1120,7 +1120,7 @@ body.light-theme .backgroundColor {
 
             .btn {
                 padding: 14px 28px;
-                font-size: 12px;
+                font-size: 10px;
                 min-width: 100px;
             }
         }
@@ -1166,6 +1166,12 @@ body.light-theme .backgroundColor {
             .main p {
                 font-size: 1rem;
                 padding: 18px;
+            }
+
+            .btn {
+                padding: 14px 28px;
+                font-size: 8px;
+                min-width: 100px;
             }
         }
 
