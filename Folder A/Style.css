@@ -1000,6 +1000,35 @@ body::before {
   .subscribe-now-content {
     flex-direction: column;
   }
+  .card-stats {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border: var(--border);
+  border-radius: 25px;
+}
+.card-title {
+  font-size: 16px;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.stat-label {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+.stat-value {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 12px;
+}
 }
 
 /* Animations */
