@@ -350,7 +350,7 @@ body::before {
 
 /* About Section */
 .about_us {
-  padding: 5%;
+  padding: 5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -423,171 +423,75 @@ body::before {
   line-height: 1.8;
 }
 
-
-@media (max-width: 768px) {
-  .about_us {
-    width: 100%;
-
-  .about_container {
-    width: 100%;
-  }
-
-  .about_container ol {
-    border-left: none;
-    padding: 0;
-  }
-
-  .about_container li {
-    margin: 0;
-    margin-bottom: 1rem;
-/*     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(15, 70, 5, 0.1)); */
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-    padding: 12px;
-    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-
-  .about_container li:hover {
-    transform: scale(1.02);
-  }
-
-  .about_container li span.marker {
-    display: none;
-  }
-
-  .about_container h3 {
-    font-size: 1.2rem;
-  }
-
-  .about_container h3 span.question {
-    font-size: 1rem;
-  }
-
-  .about_container p {
-    font-size: 0.9rem;
-  }
-
-  .about_heading h2 {
-    font-size: 1.8rem;
-  }
-}
-
 /* Ecosystem Section */
 .ecosystem_section {
-  padding: 4rem 2vw;
-  background: linear-gradient(135deg, var(--black-bg) 90%, #181818 100%);
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, transparent, rgba(50, 205, 50, 0.05), transparent);
+}
+
+.ecosystem_heading {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .ecosystem_heading h2 {
-  text-align: center;
-  color: var(--lime);
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  font-weight: 900;
-  text-shadow: 0 0 16px var(--lime-glow);
-  margin-bottom: 2.5rem;
-  letter-spacing: 0.04em;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color);
 }
 
 .ecosystem_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  justify-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .ecosystem-card {
   background: var(--sidebar-background);
+  border: var(--border);
   border-radius: 15px;
-  box-shadow: var(--shadow), 0 0 0 2px var(--lime);
-  padding: 2.2rem 1.5rem 1.8rem 1.5rem;
-  text-align: center;
-  transition: box-shadow 0.22s, transform 0.22s;
+  padding: 2rem;
+  transition: all var(--transition-speed);
   position: relative;
   overflow: hidden;
-  min-width: 0;
-  max-width: 340px;
-  border: var(--border);
 }
+
 .ecosystem-card::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: -50px; left: -50px;
-  width: 120px; height: 120px;
-  background: radial-gradient(circle, var(--lime-glow) 0%, transparent 70%);
-  filter: blur(14px);
-  opacity: 0.4;
-  z-index: 0;
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
 }
 
 .ecosystem-card:hover {
-  box-shadow: 0 16px 64px var(--lime-glow), 0 0 0 3px var(--lime-dark);
-  transform: translateY(-8px) scale(1.04);
+  transform: translateY(-10px);
+  box-shadow: var(--box-shadow-1);
+  border-color: var(--primary-color);
 }
 
-.content-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  position: relative;
-  z-index: 1;
+.content-info i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: block;
 }
 
-.icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 58px; width: 58px;
-  background: var(--icon-bg);
-  border-radius: 50%;
-  margin-bottom: 0.8rem;
-  box-shadow: 0 0 16px var(--lime), 0 0 28px #111 inset;
-  transition: box-shadow 0.2s, background 0.2s;
+.content-info h4 {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-.icon-wrapper i {
-  font-size: 2.4rem;
-  color: var(--lime);
-  text-shadow: 0 0 8px var(--lime-glow), 0 0 10px #111;
-  transition: color 0.2s;
-}
-
-.ecosystem-card:hover .icon-wrapper {
-  background: linear-gradient(135deg, #222 10%, var(--lime-glow) 90%);
-  box-shadow: 0 0 32px var(--lime), 0 0 24px var(--lime-glow);
-}
-
-h4 {
-  color: var(--lime);
-  font-size: 1.28rem;
-  font-weight: 700;
-  margin: 0.3rem 0;
-  letter-spacing: 0.03em;
-  text-shadow: 0 0 7px var(--lime-glow);
-}
-
-p {
-  color: var(--lime-dark);
-  font-size: 1.04rem;
-  opacity: 0.86;
-  margin: 0.12rem 0 0.2rem 0;
+.content-info p {
+  color: var(--text-color);
+  opacity: 0.9;
   line-height: 1.6;
-}
-
-/* Responsive tweaks */
-@media (max-width: 700px) {
-  .ecosystem_section {
-    padding: 2.2rem 1vw;
-  }
-  .ecosystem_heading h2 {
-    font-size: 2rem;
-  }
-  .ecosystem-card {
-    padding: 1.4rem 1rem;
-    max-width: 100vw;
-  }
 }
 
 /* Team Section */
@@ -1096,37 +1000,7 @@ p {
   .subscribe-now-content {
     flex-direction: column;
   }
-  .card-stats {
-  display: grid;
-  gap: 6px;
-  margin-bottom: 2rem;
 }
-
-.stat-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 12px;
-  border: var(--border);
-  border-radius: 25px;
-}
-.card-title {
-  font-size: 16px;
-  color: var(--secondary-color);
-  font-weight: bold;
-}
-.stat-label {
-  color: var(--text-color);
-  opacity: 0.8;
-  font-size: 12px;
-}
-
-.stat-value {
-  color: var(--primary-color);
-  font-weight: bold;
-  font-size: 12px;
-}
-}
-
 
 /* Animations */
 .fade-in {
@@ -2084,7 +1958,7 @@ p {
                 flex-direction: column;
                 align-items: center;
                 margin: 0;
-                width: 100%;
+                width: 90%;
             }
 
             .main-content {
@@ -2115,7 +1989,7 @@ p {
                 max-width: 90%;
                 padding: 10px;
                 border-radius: 20px;
-                background: var(--sidebar-background);
+                background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(255, 215, 0, 0.2), rgba(0, 0, 0, 0.4));
                 backdrop-filter: blur(15px);
                 border: 1px solid rgba(0, 255, 0, 0.3);
                 box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.1);
@@ -2128,18 +2002,15 @@ p {
             }
 
             .main-button-container {
-                display: flex;
-                flex-direction: column;
                 gap: 20px;
                 padding: 0;
-                margin: 0;
-                margin-bottom: 10px;
+                margin-bottom: 34px;
                 justify-content: space-between;
             }
 
             .btn {
                 padding: 14px 28px;
-                font-size: 12px;
+                font-size: 10px;
                 width: 40%;
             }
         }
@@ -2157,7 +2028,7 @@ p {
                     var(--dot-color);
             }
             .main_container {
-                padding-top: 60px;
+                padding-top: 70px;
             }
 
             body.light-theme .main {
@@ -2183,12 +2054,8 @@ p {
             }
 
             .main p {
-                width: 100%;
                 font-size: 1rem;
                 padding: 18px;
-                margin: 0;
-              margin-top: 14px;
-              margin-bottom: 25px;
             }
 
             .btn {
@@ -2236,17 +2103,6 @@ p {
             .main p {
                 font-size: 0.9rem;
                 padding: 16px;
-            }
-          .main-button-container {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                padding: 0;
-                margin-bottom: 34px;
-                align-items: center;
-                text-align: center;
-                justify-content: center;
             }
                .btn {
                 display: flex;
@@ -2313,7 +2169,6 @@ p {
                 padding: 14px 20px;
             }
         }
-
 
 /*===== SCROLLABLE CARDS====== */
 .card-section {
