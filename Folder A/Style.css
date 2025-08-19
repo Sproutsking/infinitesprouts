@@ -1053,6 +1053,7 @@ body.light-theme .backgroundColor {
                     var(--dot-color);
             }
             .main_container {
+                padding: 0;
                 padding-top: 100px;
             }
 
@@ -1120,7 +1121,7 @@ body.light-theme .backgroundColor {
             .btn {
                 padding: 14px 28px;
                 font-size: 10px;
-                min-width: 100px;
+                width: 40%;
             }
         }
 
