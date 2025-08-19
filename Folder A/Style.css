@@ -2633,7 +2633,8 @@ button.footer-label:hover {
             backdrop-filter: blur(20px);
             border: 1px solid var(--border-subtle);
             border-radius: 24px;
-            padding: 12px;
+            padding: 0;
+            margin: 0;
             margin-bottom: 20px;
             box-shadow: var(--shadow-strong);
             animation: floatUp 1.2s ease-out 0.3s both;
@@ -2894,8 +2895,8 @@ button.footer-label:hover {
             }
 
             .hero-card {
-                width: 90%;
-                margin: 0 auto;
+                width: 100%;
+                margin: 0;
                 margin-bottom: 20px;
             }
         }
@@ -2929,7 +2930,7 @@ button.footer-label:hover {
 
         @media (max-width: 480px) {
             .hero-card {
-                padding: 2rem;
+                padding: 12px;
             }
 
             .popup-content {
