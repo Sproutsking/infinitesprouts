@@ -478,7 +478,10 @@ body::before {
   padding: 4%;
   background: linear-gradient(180deg, transparent, rgba(50, 205, 50, 0.05), transparent);
 }
-
+  
+.ecosystem_section i {
+  border: 1px solid lime;
+}
 .ecosystem_heading {
   text-align: center;
   margin-bottom: 3rem;
