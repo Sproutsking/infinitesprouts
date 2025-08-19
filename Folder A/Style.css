@@ -426,6 +426,12 @@ body.light-theme .backgroundColor {
                 linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                 linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
                 var(--dot-color);
+               min-height: 100vh;
+            
+            align-items: center;
+            justify-content: center;
+            padding: 0 5%;
+            position: relative;
         }
 
         .main::before {
