@@ -1019,12 +1019,49 @@ p {
   outline: 2px solid var(--lime-primary);
   outline-offset: 2px;
 }
-/* Farmers Section */
+/* Enhanced Farmers Section - Circular Image Priority */
+:root {
+  /* Existing variables assumed to be defined elsewhere */
+  --lime-primary: #32cd32;
+  --lime-glow: #00ff00;
+  --cyber-blue: #00ffff;
+  --neon-pink: #ff0080;
+  --success-green: #00ff88;
+  --shadow-lime: rgba(50, 205, 50, 0.4);
+  --shadow-dark: rgba(0, 0, 0, 0.8);
+  --glass-bg: rgba(26, 26, 26, 0.85);
+}
+
 .farmers-page {
   display: none;
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(180deg, transparent, rgba(50, 205, 50, 0.05), transparent);
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(50, 205, 50, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, transparent, rgba(50, 205, 50, 0.05), transparent);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.farmers-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(50, 205, 50, 0.02) 49%, rgba(50, 205, 50, 0.02) 51%, transparent 52%);
+  background-size: 150px 150px;
+  animation: backgroundShift 20s ease-in-out infinite alternate;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+@keyframes backgroundShift {
+  0% { transform: translateX(0) translateY(0) scale(1); }
+  100% { transform: translateX(50px) translateY(-30px) scale(1.1); }
 }
 
 .farmers-page.active {
@@ -1033,84 +1070,350 @@ p {
 
 .farmers_section {
   padding: 6rem 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .farmers_container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
 .farmers_heading {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
 }
 
 .farmers_heading h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   color: var(--primary-color);
-  text-shadow: 0 0 10px var(--primary-color);
+  text-shadow: 
+    0 0 20px var(--primary-color),
+    0 0 40px rgba(50, 205, 50, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  animation: titlePulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes titlePulse {
+  0% { 
+    text-shadow: 0 0 20px var(--primary-color), 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+  100% { 
+    text-shadow: 0 0 30px var(--primary-color), 0 0 50px rgba(50, 205, 50, 0.4), 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+}
+
+.farmers_heading h2::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  box-shadow: 0 0 15px var(--primary-color);
+  animation: lineExpand 2s ease-in-out infinite alternate;
+  border-radius: 2px;
+}
+
+@keyframes lineExpand {
+  0% { width: 120px; opacity: 0.8; }
+  100% { width: 180px; opacity: 1; }
 }
 
 .farmers-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
+  justify-items: center;
 }
 
 .farmer-card {
-  background: var(--sidebar-background);
-  border: var(--border);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: all var(--transition-speed);
+  background: linear-gradient(145deg, 
+    var(--sidebar-background) 0%, 
+    rgba(26, 26, 26, 0.95) 50%, 
+    var(--sidebar-background) 100%);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  overflow: visible; /* Changed to show circular image properly */
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 
+    0 15px 35px var(--shadow-dark),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(50, 205, 50, 0.1);
+}
+
+/* Animated border gradient */
+.farmer-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, 
+    var(--primary-color) 0%, 
+    var(--secondary-color) 25%, 
+    var(--accent-color) 50%, 
+    var(--primary-color) 100%);
+  background-size: 400% 400%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: borderFlow 8s ease-in-out infinite;
+}
+
+@keyframes borderFlow {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+.farmer-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(50, 205, 50, 0.03) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.02) 50%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.farmer-card:hover::before {
+  opacity: 1;
+}
+
+.farmer-card:hover::after {
+  opacity: 1;
 }
 
 .farmer-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--box-shadow-1);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 
+    0 25px 60px var(--shadow-dark),
+    0 0 40px rgba(50, 205, 50, 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.15),
+    0 0 0 1px rgba(50, 205, 50, 0.4);
   border-color: var(--primary-color);
 }
 
+/* PRIORITY: Perfect Circular Image Section */
 .farmer-image {
-  height: 200px;
-  overflow: hidden;
+  height: auto; /* Changed from fixed height */
+  padding: 2rem 2rem 1rem 2rem; /* Added padding for proper spacing */
+  overflow: visible; /* Changed to show effects */
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* Remove any background */
 }
 
+/* Outer rotating ring effect */
+.farmer-image::before {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, 
+    var(--primary-color) 0%, 
+    var(--secondary-color) 30%, 
+    var(--accent-color) 60%, 
+    var(--primary-color) 100%);
+  animation: outerRingRotate 12s linear infinite;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+  filter: blur(1px);
+}
+
+/* Inner pulsing glow */
+.farmer-image::after {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, 
+    transparent 45%, 
+    rgba(50, 205, 50, 0.4) 50%, 
+    transparent 55%);
+  animation: innerGlow 4s ease-in-out infinite alternate;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+@keyframes outerRingRotate {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes innerGlow {
+  0% { 
+    transform: scale(0.9);
+    opacity: 0.2;
+  }
+  100% { 
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+.farmer-card:hover .farmer-image::before {
+  opacity: 0.7;
+  transform: scale(1.1);
+  filter: blur(0.5px);
+}
+
+.farmer-card:hover .farmer-image::after {
+  opacity: 0.8;
+}
+
+/* THE STAR: Perfect Circular Image */
 .farmer-image img {
-  width: 100%;
-  height: 100%;
+  width: 120px !important; /* Force exact dimensions */
+  height: 120px !important;
+  border-radius: 50% !important;
   object-fit: cover;
-  transition: transform var(--transition-speed);
+  object-position: center;
+  border: 4px solid var(--primary-color);
+  box-shadow: 
+    0 0 25px rgba(50, 205, 50, 0.6),
+    0 0 50px rgba(50, 205, 50, 0.2),
+    inset 0 0 20px rgba(0, 0, 0, 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Fallback for missing images */
+  transform: scale(1); /* Ensure proper initial scale */
+  filter: contrast(1.1) saturate(1.1) brightness(1.05);
 }
 
 .farmer-card:hover .farmer-image img {
-  transform: scale(1.1);
+  border-color: var(--accent-color, #ffff00);
+  border-width: 5px;
+  box-shadow: 
+    0 0 40px var(--primary-color),
+    0 0 80px rgba(50, 205, 50, 0.4),
+    0 0 120px rgba(50, 205, 50, 0.2),
+    inset 0 0 20px rgba(0, 0, 0, 0.2),
+    inset 0 3px 0 rgba(255, 255, 255, 0.3);
+  transform: scale(1.15) !important; /* Slight zoom on hover */
+  filter: contrast(1.2) saturate(1.3) brightness(1.1);
 }
 
+/* Enhanced Farmer Info */
 .farmer-info {
-  padding: 1.5rem;
+  padding: 1rem 2rem 2rem 2rem; /* Adjusted padding */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .farmer-name {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  transition: all 0.4s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.farmer-name::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: width 0.4s ease;
+  border-radius: 1px;
+}
+
+.farmer-card:hover .farmer-name {
+  color: var(--accent-color, #ffff00);
+  text-shadow: 
+    0 0 15px var(--primary-color),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.farmer-card:hover .farmer-name::after {
+  width: 80%;
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .crop-type {
   display: inline-block;
   background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
   color: var(--background-color);
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 700;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(50, 205, 50, 0.3);
+}
+
+.crop-type::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.farmer-card:hover .crop-type {
+  background: linear-gradient(45deg, var(--accent-color, #ffff00), var(--primary-color));
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(50, 205, 50, 0.4);
+}
+
+.farmer-card:hover .crop-type::before {
+  left: 100%;
 }
 
 .info-grid {
@@ -1122,99 +1425,450 @@ p {
 
 .info-item {
   text-align: center;
-  border: var(--border);
-  padding: 0.5rem;
-  border-radius: 5px;
+  border: 2px solid rgba(50, 205, 50, 0.2);
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.02) 0%, 
+    rgba(255, 255, 255, 0.01) 100%);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.info-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(50, 205, 50, 0.05) 0%, 
+    transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.farmer-card:hover .info-item {
+  border-color: rgba(50, 205, 50, 0.4);
+  background: linear-gradient(145deg, 
+    rgba(50, 205, 50, 0.08) 0%, 
+    rgba(0, 255, 255, 0.05) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.farmer-card:hover .info-item::before {
+  opacity: 1;
 }
 
 .info-label {
   font-size: 0.75rem;
   color: var(--secondary-color);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .info-value {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.farmer-card:hover .info-label {
+  color: var(--primary-color);
+}
+
+.farmer-card:hover .info-value {
+  color: var(--accent-color, #ffff00);
+  transform: scale(1.1);
 }
 
 .revenue-section {
-  background: var(--sidebar-background);
-  border: var(--border);
-  padding: 1rem;
-  border-radius: 10px;
+  background: linear-gradient(145deg, 
+    var(--sidebar-background) 0%, 
+    rgba(20, 20, 20, 0.8) 100%);
+  border: 2px solid rgba(50, 205, 50, 0.3);
+  padding: 1.2rem;
+  border-radius: 15px;
   margin-bottom: 1rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.revenue-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(50, 205, 50, 0.05) 0%, 
+    transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.farmer-card:hover .revenue-section {
+  border-color: rgba(50, 205, 50, 0.5);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(50, 205, 50, 0.2);
+  transform: translateY(-5px);
+}
+
+.farmer-card:hover .revenue-section::before {
+  opacity: 1;
 }
 
 .revenue-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
-  padding: 0.3rem 0;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 .revenue-item:last-child {
   margin-bottom: 0;
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--primary-color);
+  padding-top: 0.8rem;
+  border-top: 2px solid var(--primary-color);
   font-weight: bold;
 }
 
 .revenue-label {
   font-size: 0.9rem;
   color: var(--text-color);
-  opacity: 0.8;
+  opacity: 0.9;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .revenue-value {
-  font-weight: bold;
+  font-weight: 800;
   color: var(--secondary-color);
+  font-size: 1.1rem;
+  transition: all 0.4s ease;
 }
 
 .revenue-value.positive {
   color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(50, 205, 50, 0.4);
 }
 
+.farmer-card:hover .revenue-label {
+  color: var(--accent-color, #ffff00);
+  opacity: 1;
+}
+
+.farmer-card:hover .revenue-value {
+  transform: scale(1.08);
+  text-shadow: 0 0 15px currentColor;
+}
+
+/* Enhanced ROI Badge */
 .roi-badge {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, var(--accent-color, #ffaa00), var(--secondary-color));
   color: var(--background-color);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 
+    0 6px 20px rgba(255, 170, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+  z-index: 3;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .high-roi {
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color)) !important;
-  animation: glow 2s ease-in-out infinite alternate;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color, #ffff00)) !important;
+  animation: premiumGlow 2.5s ease-in-out infinite alternate !important;
+  box-shadow: 
+    0 6px 20px rgba(50, 205, 50, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+@keyframes premiumGlow {
+  0% { 
+    box-shadow: 0 6px 20px rgba(50, 205, 50, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transform: scale(1);
+  }
+  100% { 
+    box-shadow: 0 8px 30px rgba(50, 205, 50, 0.8), 0 0 40px rgba(50, 205, 50, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+  }
+}
+
+.farmer-card:hover .roi-badge {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 
+    0 10px 30px rgba(255, 170, 0, 0.6),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.farmer-card:hover .high-roi {
+  box-shadow: 
+    0 10px 30px rgba(50, 205, 50, 0.8),
+    0 0 50px rgba(50, 205, 50, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.5) !important;
 }
 
 .investment-btn {
   width: 100%;
-  padding: 0.8rem;
+  padding: 1rem;
   background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
   color: var(--background-color);
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 12px;
+  font-weight: 800;
   cursor: pointer;
-  transition: all var(--transition-speed);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(50, 205, 50, 0.3);
+}
+
+.investment-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s ease;
 }
 
 .investment-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px var(--primary-color);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 30px var(--primary-color);
+  background: linear-gradient(45deg, var(--accent-color, #ffff00), var(--primary-color));
+}
+
+.investment-btn:hover::before {
+  left: 100%;
+}
+
+/* Placeholder for missing images */
+.farmer-image img[src=""], 
+.farmer-image img:not([src]),
+.farmer-image img[src="#"] {
+  background: linear-gradient(145deg, 
+    rgba(50, 205, 50, 0.1) 0%, 
+    rgba(40, 40, 40, 0.9) 50%, 
+    rgba(0, 255, 255, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.farmer-image img[src=""]::before,
+.farmer-image img:not([src])::before,
+.farmer-image img[src="#"]::before {
+  content: "👤";
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 15px rgba(50, 205, 50, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .farmers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .farmers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.8rem;
+  }
+  
+  .farmer-card {
+    min-height: 550px;
+  }
+  
+  .farmer-image img {
+    width: 110px !important;
+    height: 110px !important;
+  }
+  
+  .farmer-image::before {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .farmer-image::after {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media (max-width: 900px) {
+  .farmers_section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .farmers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .farmer-card {
+    min-height: 520px;
+  }
+  
+  .farmer-image img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .farmer-image::before {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .farmer-image::after {
+    width: 115px;
+    height: 115px;
+  }
+  
+  .farmer-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .farmers_section {
+    padding: 3rem 1rem;
+  }
+  
+  .farmers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .farmer-card {
+    min-height: 500px;
+  }
+  
+  .farmer-image {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+  
+  .farmer-image img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  
+  .farmer-image::before {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .farmer-image::after {
+    width: 105px;
+    height: 105px;
+  }
+  
+  .farmer-info {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .farmer-name {
+    font-size: 1.2rem;
+  }
+  
+  .crop-type {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .farmers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .farmer-card {
+    min-height: 480px;
+  }
+  
+  .farmer-image img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .farmer-image::before {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .farmer-image::after {
+    width: 95px;
+    height: 95px;
+  }
+  
+  .info-grid {
+    gap: 0.8rem;
+  }
+  
+  .info-item {
+    padding: 0.8rem 0.4rem;
+  }
+}
+
+/* Performance optimizations */
+.farmer-card,
+.farmer-image img,
+.investment-btn,
+.roi-badge {
+  will-change: transform;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.farmer-card:focus-visible,
+.investment-btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 /* Footer */
