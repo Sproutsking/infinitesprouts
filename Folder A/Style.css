@@ -1211,7 +1211,7 @@ p {
   opacity: 1;
 }
 
-.farmer-card:hover {
+/* .farmer-card:hover {
   transform: translateY(-15px) scale(1.02);
   box-shadow: 
     0 25px 60px var(--shadow-dark),
@@ -1219,7 +1219,7 @@ p {
     inset 0 2px 0 rgba(255, 255, 255, 0.15),
     0 0 0 1px rgba(50, 205, 50, 0.4);
   border-color: var(--primary-color);
-}
+} */
 
 /* PRIORITY: Perfect Circular Image Section */
 .farmer-image {
