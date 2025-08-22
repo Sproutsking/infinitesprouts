@@ -1019,9 +1019,7 @@ p {
   outline: 2px solid var(--lime-primary);
   outline-offset: 2px;
 }
-/* Enhanced Farmers Section - Circular Image Priority */
 :root {
-  /* Existing variables assumed to be defined elsewhere */
   --lime-primary: #32cd32;
   --lime-glow: #00ff00;
   --cyber-blue: #00ffff;
@@ -1030,6 +1028,12 @@ p {
   --shadow-lime: rgba(50, 205, 50, 0.4);
   --shadow-dark: rgba(0, 0, 0, 0.8);
   --glass-bg: rgba(26, 26, 26, 0.85);
+
+  --primary-color: var(--lime-primary);
+  --secondary-color: var(--lime-glow);
+  --accent-color: var(--cyber-blue);
+  --sidebar-background: #111418;
+  --text-color: #fff;
 }
 
 .farmers-page {
@@ -1042,7 +1046,11 @@ p {
     linear-gradient(180deg, transparent, rgba(50, 205, 50, 0.05), transparent);
   position: relative;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: auto; /* SCROLL FIX */
+}
+
+.farmers-page.active {
+  display: block;
 }
 
 .farmers-page::before {
@@ -1063,10 +1071,6 @@ p {
 @keyframes backgroundShift {
   0% { transform: translateX(0) translateY(0) scale(1); }
   100% { transform: translateX(50px) translateY(-30px) scale(1.1); }
-}
-
-.farmers-page.active {
-  display: block;
 }
 
 .farmers_section {
@@ -1146,7 +1150,7 @@ p {
   -webkit-backdrop-filter: blur(15px);
   border: 2px solid transparent;
   border-radius: 20px;
-  overflow: visible; /* Changed to show circular image properly */
+  overflow: visible;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
   width: 100%;
@@ -1160,7 +1164,6 @@ p {
     0 0 0 1px rgba(50, 205, 50, 0.1);
 }
 
-/* Animated border gradient */
 .farmer-card::before {
   content: '';
   position: absolute;
@@ -1204,19 +1207,17 @@ p {
   border-radius: 20px;
 }
 
-/* PRIORITY: Perfect Circular Image Section */
 .farmer-image {
-  height: auto; /* Changed from fixed height */
-  padding: 2rem 2rem 1rem 2rem; /* Added padding for proper spacing */
-  overflow: visible; /* Changed to show effects */
+  height: auto;
+  padding: 2rem 2rem 1rem 2rem;
+  overflow: visible;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: transparent; /* Remove any background */
+  background: transparent;
 }
 
-/* Outer rotating ring effect */
 .farmer-image::before {
   content: '';
   position: absolute;
@@ -1235,7 +1236,6 @@ p {
   filter: blur(1px);
 }
 
-/* Inner pulsing glow */
 .farmer-image::after {
   content: '';
   position: absolute;
@@ -1278,9 +1278,8 @@ p {
   opacity: 0.8;
 }
 
-/* THE STAR: Perfect Circular Image */
 .farmer-image img {
-  width: 120px !important; /* Force exact dimensions */
+  width: 120px !important;
   height: 120px !important;
   border-radius: 50% !important;
   object-fit: cover;
@@ -1294,14 +1293,13 @@ p {
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
   z-index: 2;
-  background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Fallback for missing images */
-  transform: scale(1); /* Ensure proper initial scale */
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  transform: scale(1);
   filter: contrast(1.1) saturate(1.1) brightness(1.05);
 }
 
-/* Enhanced Farmer Info */
 .farmer-info {
-  padding: 1rem 2rem 2rem 2rem; /* Adjusted padding */
+  padding: 1rem 2rem 2rem 2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1533,7 +1531,6 @@ p {
   text-shadow: 0 0 15px currentColor;
 }
 
-/* Enhanced ROI Badge */
 .roi-badge {
   position: absolute;
   top: 20px;
@@ -1626,7 +1623,6 @@ p {
   left: 100%;
 }
 
-/* Placeholder for missing images */
 .farmer-image img[src=""], 
 .farmer-image img:not([src]),
 .farmer-image img[src="#"] {
@@ -1667,21 +1663,17 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 1.8rem;
   }
-  
   .farmer-card {
     min-height: 550px;
   }
-  
   .farmer-image img {
     width: 110px !important;
     height: 110px !important;
   }
-  
   .farmer-image::before {
     width: 140px;
     height: 140px;
   }
-  
   .farmer-image::after {
     width: 125px;
     height: 125px;
@@ -1692,31 +1684,25 @@ p {
   .farmers_section {
     padding: 4rem 1.5rem;
   }
-  
   .farmers-grid {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 1.5rem;
   }
-  
   .farmer-card {
     min-height: 520px;
   }
-  
   .farmer-image img {
     width: 100px !important;
     height: 100px !important;
   }
-  
   .farmer-image::before {
     width: 130px;
     height: 130px;
   }
-  
   .farmer-image::after {
     width: 115px;
     height: 115px;
   }
-  
   .farmer-name {
     font-size: 1.3rem;
   }
@@ -1726,43 +1712,34 @@ p {
   .farmers_section {
     padding: 3rem 1rem;
   }
-  
   .farmers-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.2rem;
   }
-  
   .farmer-card {
     min-height: 500px;
   }
-  
   .farmer-image {
     padding: 1.5rem 1.5rem 1rem 1.5rem;
   }
-  
   .farmer-image img {
     width: 90px !important;
     height: 90px !important;
   }
-  
   .farmer-image::before {
     width: 120px;
     height: 120px;
   }
-  
   .farmer-image::after {
     width: 105px;
     height: 105px;
   }
-  
   .farmer-info {
     padding: 1rem 1.5rem 1.5rem 1.5rem;
   }
-  
   .farmer-name {
     font-size: 1.2rem;
   }
-  
   .crop-type {
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
@@ -1774,36 +1751,29 @@ p {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
   .farmer-card {
     min-height: 480px;
   }
-  
   .farmer-image img {
     width: 80px !important;
     height: 80px !important;
   }
-  
   .farmer-image::before {
     width: 110px;
     height: 110px;
   }
-  
   .farmer-image::after {
     width: 95px;
     height: 95px;
   }
-  
   .info-grid {
     gap: 0.8rem;
   }
-  
   .info-item {
     padding: 0.8rem 0.4rem;
   }
 }
 
-/* Performance optimizations */
 .farmer-card,
 .farmer-image img,
 .investment-btn,
@@ -1811,7 +1781,6 @@ p {
   will-change: transform;
 }
 
-/* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -1820,13 +1789,11 @@ p {
   }
 }
 
-/* Focus styles for accessibility */
 .farmer-card:focus-visible,
 .investment-btn:focus-visible {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
-
 /* Footer */
 .footer {
   background: var(--sidebar-background);
