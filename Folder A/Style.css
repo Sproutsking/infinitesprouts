@@ -2494,103 +2494,6 @@ p {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         }
 
-        /* FLOATING CARD STYLES */
-        .floating-message-card {
-            position: absolute;
-            top: 50%;
-            right: 8%;
-            width: 300px;
-            height: 200px;
-            perspective: 1200px;
-            z-index: 15;
-            animation: cardFloat 6s ease-in-out infinite;
-        }
-
-        .card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transform-style: preserve-3d;
-            animation: cardSpin 12s cubic-bezier(0.23, 1, 0.320, 1) infinite;
-            transition: all 0.4s ease;
-        }
-
-        .floating-message-card:hover .card-inner {
-            animation-play-state: paused;
-            transform: rotateY(180deg) scale(1.1);
-        }
-
-        .card-front,
-        .card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid;
-            backdrop-filter: blur(15px);
-        }
-
-        .card-front {
-            background: linear-gradient(135deg, 
-                rgba(0, 0, 0, 0.9), 
-                rgba(0, 255, 0, 0.1), 
-                rgba(255, 215, 0, 0.1),
-                rgba(0, 0, 0, 0.8));
-            border-color: var(--primary-color);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.3),
-                0 0 40px rgba(0, 255, 0, 0.2),
-                inset 0 0 30px rgba(0, 255, 0, 0.05);
-        }
-
-        .card-front p {
-/*             margin: 8px 0; */
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-            animation: textGlowPulse 3s ease-in-out infinite;
-        }
-
-        .card-front h5 {
-            color: var(--accent-color);
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 8px 5px;
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid var(--accent-color);
-            border-radius: 25px;
-            margin: 5px 0;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-            animation: tagFloat 4s ease-in-out infinite;
-        }
-
-        .card-back {
-            background: linear-gradient(135deg, 
-                rgba(255, 215, 0, 0.9), 
-                rgba(0, 0, 0, 0.2),
-                rgba(0, 255, 0, 0.1),
-                rgba(255, 215, 0, 0.8));
-            transform: rotateY(180deg);
-            border-color: var(--accent-color);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.3),
-                0 0 40px rgba(255, 215, 0, 0.3),
-                inset 0 0 30px rgba(255, 215, 0, 0.1);
-        }
-
-        .card-back img {
-            height: 140px;
-            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
-            animation: logoSpin 8s linear infinite;
-        }
-
         /* LIGHT THEME ENHANCEMENTS */
         body.light-theme .main p {
             color: #333;
@@ -3174,34 +3077,6 @@ p {
             line-height: 1.4;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
         }
-        .partner-image,
-.farmer-image {
-  width: 100%;
-  height: 180px;            /* Adjust height as needed for your layout */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f6f6f6;      /* Light background to help images stand out */
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-
-.partner-image img,
-.farmer-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;        /* Ensures the image fills the area, cropping if necessary */
-  object-position: center;  /* Center the image if it is cropped */
-  display: block;
-  border-radius: 10px;      /* Matches container for rounded corners */
-  transition: transform 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.partner-image:hover img,
-.farmer-image:hover img {
-  transform: scale(1.05);   /* Slight zoom on hover for effect */
-}
 
         @media (max-width: 900px) {
             .card-section {
