@@ -558,7 +558,6 @@ p {
 
 .team_section {
   background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-black) 100%);
-  padding: 6rem 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -589,6 +588,7 @@ p {
 .team_container {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 6rem 2rem;
   position: relative;
   z-index: 1;
 }
