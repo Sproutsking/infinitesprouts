@@ -1020,31 +1020,31 @@ p {
   outline-offset: 2px;
 }
 :root {
-            /* Sophisticated Color Palette */
-            --primary-emerald: #10b981;
-            --primary-dark: #059669;
-            --accent-cyan: #06b6d4;
-            --accent-purple: #8b5cf6;
-            --neutral-100: #f8fafc;
-            --neutral-200: #e2e8f0;
-            --neutral-300: #cbd5e1;
-            --neutral-400: #94a3b8;
-            --neutral-500: #64748b;
-            --neutral-600: #475569;
-            --neutral-700: #334155;
-            --neutral-800: #1e293b;
-            --neutral-900: #0f172a;
-            
-            /* Glass & Effects */
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            
-            /* Typography */
-            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
+  /* Lime & Black Tech Palette */
+  --primary-emerald: #32cd32;          /* Lime Green */
+  --primary-dark: #0d0d0d;             /* Deep Black */
+  --accent-cyan: #00ffea;              /* Vibrant Cyan (for neon accent) */
+  --accent-purple: #00ff80;            /* Neon Lime (replacing purple for tech look) */
+  --neutral-100: #e6ffe6;              /* Light lime white */
+  --neutral-200: #b8f5b8;              /* Lime-tinted gray */
+  --neutral-300: #7cf37c;              /* Soft lime */
+  --neutral-400: #39ff14;              /* Vivid lime text */
+  --neutral-500: #1aff1a;              /* Strong lime shade */
+  --neutral-600: #222;                 /* Black shade for backgrounds */
+  --neutral-700: #181818;              /* Slightly lighter black */
+  --neutral-800: #141414;              /* Even lighter black */
+  --neutral-900: #0d0d0d;              /* Pure black */
+
+  /* Glass & Effects */
+  --glass-bg: rgba(50, 205, 50, 0.07); /* Lime glass effect */
+  --glass-border: rgba(50, 205, 50, 0.13); /* Lime glass border */
+  --shadow-soft: 0 4px 6px -1px rgba(50, 205, 50, 0.10);
+  --shadow-medium: 0 10px 15px -3px rgba(50, 205, 50, 0.15);
+  --shadow-large: 0 25px 50px -12px rgba(50, 205, 50, 0.22);
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
         * {
             margin: 0;
