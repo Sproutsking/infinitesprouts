@@ -1105,19 +1105,19 @@ p {
 .farmers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 1.75rem;
+    gap: 1.5rem;
     justify-items: center;
 }
 
 /* NEXT LEVEL FARMER CARD */
 .farmer-card {
     background: linear-gradient(145deg, 
-        rgba(0, 0, 0, 0.95) 0%, 
-        rgba(10, 10, 10, 0.98) 50%, 
-        rgba(0, 0, 0, 0.95) 100%);
-    border: 1px solid #1a1a1a;
+        rgba(0, 0, 0, 0.98) 0%, 
+        rgba(5, 15, 5, 0.98) 50%, 
+        rgba(0, 0, 0, 0.98) 100%);
+    border-color: rgba(0, 255, 0, 0.6);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 14px;
     width: 100%;
     max-width: 360px;
     position: relative;
@@ -1157,30 +1157,6 @@ p {
     background: inherit;
     border-radius: inherit;
     z-index: -1;
-}
-
-/* Hover State */
-.farmer-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    border-color: rgba(0, 255, 0, 0.6);
-    background: linear-gradient(145deg, 
-        rgba(0, 0, 0, 0.98) 0%, 
-        rgba(5, 15, 5, 0.98) 50%, 
-        rgba(0, 0, 0, 0.98) 100%);
-}
-
-.farmer-card:hover::before {
-    opacity: 1;
-    animation-duration: 4s;
-}
-
-/* Floating particles effect */
-.farmer-card:hover::after {
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(0, 255, 0, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(200, 255, 0, 0.04) 0%, transparent 50%),
-        inherit;
 }
 
 /* Elegant Image Section */
