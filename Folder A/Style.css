@@ -1064,6 +1064,34 @@ p {
   outline-offset: 2px;
 }
 
+/* GLOBAL STYLES - Updated with your color scheme */
+:root {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --primary-color: lime;
+  --secondary-color: #c8ff00;
+  --accent-color: gold;
+  --button-background: #000000;
+  --button-text-color: lime;
+  --popup-background: #ffffff;
+  --popup-text-color: #000000;
+  --active-color: lime;
+  --danger-color: #ff0000;
+  --message-limit-color: #ff4d4d;
+  --transition-speed: 0.3s;
+  --close-button: red;
+  --sidebar-background: #000000;
+  --sidebar-gradient-1: #000000;
+  --sidebar-gradient-2: #000000;
+  --box-shadow: 2px 2px 4px #2b2b2b, -2px -2px 4px #2b2b2b;
+  --box-shadow-1: 0 0 4px 1px lime;
+  --border: 1px solid #3c3c3c;
+  --dot-bg: #000000;
+  --dot-color: rgba(255, 255, 255, 0.5);
+  --dot-size: 2px;
+  --dot-space: 20px;
+}
+
 /* Subtle Background Pattern */
 .farmers-page {
     min-height: 100vh;
@@ -1123,7 +1151,7 @@ p {
 
 .farmers_heading p {
     font-size: 1.125rem;
-    color: var(--neutral-400);
+    color: #a3a3a3;
     font-weight: 400;
     max-width: 600px;
     margin: 1.5rem auto 0;
@@ -1137,49 +1165,78 @@ p {
     justify-items: center;
 }
 
-/* Refined Farmer Card */
+/* NEXT LEVEL FARMER CARD */
 .farmer-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: var(--border);
-    border-radius: 16px;
-    padding: 1.5rem;
+    background: linear-gradient(145deg, 
+        rgba(0, 0, 0, 0.95) 0%, 
+        rgba(10, 10, 10, 0.98) 50%, 
+        rgba(0, 0, 0, 0.95) 100%);
+    border: 1px solid #1a1a1a;
+    border-radius: 20px;
+    padding: 2rem;
     width: 100%;
     max-width: 360px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    box-shadow: var(--box-shadow), var(--box-shadow-1);
     overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
+/* Animated Border Effect */
 .farmer-card::before {
     content: '';
     position: absolute;
-    inset: 0;
-    padding: 1px;
-    background: linear-gradient(135deg, 
-        rgba(0, 255, 0, 0.3) 0%, 
-        transparent 40%, 
-        rgba(255, 215, 0, 0.2) 100%);
+    inset: -2px;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        lime 60deg,
+        #c8ff00 120deg,
+        transparent 180deg,
+        gold 240deg,
+        lime 300deg,
+        transparent 360deg
+    );
     border-radius: inherit;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: xor;
+    z-index: -2;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: all 0.6s ease;
+    animation: borderRotate 8s linear infinite;
 }
 
+/* Inner glow layer */
+.farmer-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+/* Hover State */
 .farmer-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 
-        var(--shadow-large),
-        0 0 0 1px rgba(0, 255, 0, 0.3),
-        0 0 20px rgba(0, 255, 0, 0.2);
-    border-color: lime;
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(0, 255, 0, 0.6);
+    background: linear-gradient(145deg, 
+        rgba(0, 0, 0, 0.98) 0%, 
+        rgba(5, 15, 5, 0.98) 50%, 
+        rgba(0, 0, 0, 0.98) 100%);
 }
 
 .farmer-card:hover::before {
     opacity: 1;
+    animation-duration: 4s;
+}
+
+/* Floating particles effect */
+.farmer-card:hover::after {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(200, 255, 0, 0.04) 0%, transparent 50%),
+        inherit;
 }
 
 /* Elegant Image Section */
@@ -1187,31 +1244,44 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     position: relative;
 }
 
+.farmer-image::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, lime, #c8ff00, gold, lime);
+    animation: imageGlow 6s linear infinite;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.farmer-card:hover .farmer-image::before {
+    opacity: 0.3;
+}
+
 .farmer-image img {
-    width: 80px !important;
-    height: 80px !important;
+    width: 90px !important;
+    height: 90px !important;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    border: 2px solid lime;
-    box-shadow: 
-        0 4px 12px rgba(0, 255, 0, 0.3),
-        0 0 0 4px rgba(0, 255, 0, 0.1),
-        0 0 15px rgba(0, 255, 0, 0.2);
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, var(--neutral-800), var(--neutral-700));
+    border: 3px solid transparent;
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(145deg, lime, #c8ff00, gold) border-box;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .farmer-card:hover .farmer-image img {
-    transform: scale(1.05);
-    box-shadow: 
-        0 8px 24px rgba(0, 255, 0, 0.4),
-        0 0 0 4px rgba(0, 255, 0, 0.2),
-        0 0 25px rgba(0, 255, 0, 0.3);
+    transform: scale(1.08);
+    filter: brightness(1.1) saturate(1.2);
 }
 
 /* Professional Info Layout */
@@ -1220,145 +1290,271 @@ p {
 }
 
 .farmer-name {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: 0.375rem;
-    letter-spacing: -0.01em;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
     line-height: 1.3;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.farmer-card:hover .farmer-name {
+    color: lime;
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+.farmer-name::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, lime, transparent);
+    transition: transform 0.4s ease;
+}
+
+.farmer-card:hover .farmer-name::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 .crop-type {
     display: inline-block;
-    background: linear-gradient(135deg, lime, #32cd32);
-    color: var(--background-color);
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 0, 0.1) 0%, 
+        rgba(200, 255, 0, 0.1) 100%);
+    border: 1px solid lime;
+    color: lime;
     font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.375rem 0.875rem;
-    border-radius: 20px;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.3), 0 0 10px rgba(0, 255, 0, 0.2);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 255, 0, 0.3);
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.crop-type::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.2), transparent);
+    transition: left 0.6s ease;
 }
 
 .farmer-card:hover .crop-type {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3);
-    background: linear-gradient(135deg, #c8ff00, lime);
+    background: linear-gradient(135deg, lime, #c8ff00);
+    color: #000000;
+    border-color: #c8ff00;
+    text-shadow: none;
 }
 
-/* Clean Info Grid */
+.farmer-card:hover .crop-type::before {
+    left: 100%;
+}
+
+/* Futuristic Info Grid */
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.875rem;
-    margin-bottom: 1.25rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .info-item {
-    background: rgba(0, 0, 0, 0.6);
-    border: var(--border);
-    border-radius: 8px;
-    padding: 0.875rem 0.625rem;
+    background: linear-gradient(145deg, 
+        rgba(255, 255, 255, 0.02) 0%, 
+        rgba(255, 255, 255, 0.05) 50%, 
+        rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem 0.75rem;
     text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.info-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, lime, transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
 }
 
 .farmer-card:hover .info-item {
-    background: rgba(0, 255, 0, 0.1);
+    background: linear-gradient(145deg, 
+        rgba(0, 255, 0, 0.05) 0%, 
+        rgba(200, 255, 0, 0.05) 50%, 
+        rgba(255, 215, 0, 0.05) 100%);
     border-color: rgba(0, 255, 0, 0.3);
-    box-shadow: inset 0 1px 3px rgba(0, 255, 0, 0.1), 0 0 5px rgba(0, 255, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.farmer-card:hover .info-item::before {
+    transform: scaleX(1);
 }
 
 .info-label {
-    font-size: 0.6875rem;
-    color: var(--neutral-400);
+    font-size: 0.7rem;
+    color: #888888;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     font-weight: 600;
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.farmer-card:hover .info-label {
+    color: #c8ff00;
 }
 
 .info-value {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--neutral-200);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
 
-/* Sophisticated Revenue Section */
+.farmer-card:hover .info-value {
+    color: lime;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+}
+
+/* Next-Gen Revenue Section */
 .revenue-section {
-    background: rgba(0, 0, 0, 0.7);
-    border: var(--border);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(145deg, 
+        rgba(0, 0, 0, 0.8) 0%, 
+        rgba(10, 10, 10, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.revenue-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, 
+        rgba(0, 255, 0, 0.02) 0%, 
+        transparent 25%, 
+        rgba(255, 215, 0, 0.02) 50%, 
+        transparent 75%, 
+        rgba(200, 255, 0, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
 }
 
 .farmer-card:hover .revenue-section {
-    background: rgba(0, 255, 0, 0.1);
-    border-color: rgba(0, 255, 0, 0.3);
-    box-shadow: inset 0 2px 4px rgba(0, 255, 0, 0.1), 0 0 8px rgba(0, 255, 0, 0.1);
+    border-color: rgba(0, 255, 0, 0.4);
+    background: linear-gradient(145deg, 
+        rgba(0, 10, 0, 0.9) 0%, 
+        rgba(5, 15, 5, 0.95) 100%);
+}
+
+.farmer-card:hover .revenue-section::before {
+    opacity: 1;
 }
 
 .revenue-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.8125rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
 }
 
 .revenue-item:last-child {
     margin-bottom: 0;
-    padding-top: 0.5rem;
+    padding-top: 0.6rem;
     border-top: 1px solid rgba(0, 255, 0, 0.3);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .revenue-label {
-    color: var(--neutral-400);
+    color: #aaaaaa;
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.farmer-card:hover .revenue-label {
+    color: #c8ff00;
 }
 
 .revenue-value {
-    color: var(--neutral-200);
-    font-weight: 600;
+    color: #ffffff;
+    font-weight: 700;
+    transition: all 0.3s ease;
 }
 
 .revenue-value.positive {
     color: lime;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
 }
 
-/* Refined Badge */
+.farmer-card:hover .revenue-value {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Epic ROI Badge */
 .roi-badge {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: linear-gradient(135deg, gold, #ffd700);
-    color: var(--background-color);
-    font-size: 0.6875rem;
-    font-weight: 700;
-    padding: 0.375rem 0.625rem;
-    border-radius: 12px;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: linear-gradient(135deg, 
+        rgba(255, 215, 0, 0.9) 0%, 
+        rgba(255, 165, 0, 0.9) 100%);
+    color: #000000;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.5rem 0.75rem;
+    border-radius: 15px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    box-shadow: 0 2px 4px rgba(255, 215, 0, 0.4), 0 0 8px rgba(255, 215, 0, 0.2);
-    z-index: 2;
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    letter-spacing: 0.08em;
+    z-index: 3;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    transition: all 0.4s ease;
+    text-shadow: none;
+}
+
+.farmer-card:hover .roi-badge {
+    transform: scale(1.05) rotate(2deg);
+    background: linear-gradient(135deg, gold, #ffd700);
+    border-color: gold;
 }
 
 .high-roi {
-    background: linear-gradient(135deg, lime, #32cd32) !important;
-    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.4), 0 0 8px rgba(0, 255, 0, 0.2) !important;
-    border: 1px solid rgba(0, 255, 0, 0.3) !important;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 0, 0.9) 0%, 
+        rgba(200, 255, 0, 0.9) 100%) !important;
+    border: 1px solid rgba(0, 255, 0, 0.5) !important;
+}
+
+.farmer-card:hover .high-roi {
+    background: linear-gradient(135deg, lime, #c8ff00) !important;
+    border-color: lime !important;
 }
 
 /* Premium Button */
@@ -1380,22 +1576,66 @@ p {
     font-size: 0.9375rem;
     letter-spacing: -0.01em;
     transition: all 0.3s ease;
-    box-shadow: 
-        0 4px 6px rgba(0, 255, 0, 0.3),
-        0 1px 3px rgba(0, 0, 0, 0.2),
-        0 0 15px rgba(0, 255, 0, 0.2);
     border: 1px solid rgba(0, 255, 0, 0.3);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn.green::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
 }
 
 .btn.green:hover {
     transform: translateY(-2px);
-    box-shadow: 
-        0 8px 16px rgba(0, 255, 0, 0.4),
-        0 4px 6px rgba(0, 0, 0, 0.2),
-        0 0 25px rgba(0, 255, 0, 0.3);
     background: linear-gradient(135deg, #c8ff00, lime);
+    border-color: #c8ff00;
 }
+
+.btn.green:hover::before {
+    left: 100%;
+}
+
+/* Keyframe Animations */
+@keyframes borderRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes imageGlow {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.02); }
+}
+
+/* Smooth Card Entry Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.farmer-card {
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.farmer-card:nth-child(1) { animation-delay: 0ms; }
+.farmer-card:nth-child(2) { animation-delay: 100ms; }
+.farmer-card:nth-child(3) { animation-delay: 200ms; }
+.farmer-card:nth-child(4) { animation-delay: 300ms; }
+.farmer-card:nth-child(5) { animation-delay: 400ms; }
+.farmer-card:nth-child(6) { animation-delay: 500ms; }
 
 /* Responsive Excellence */
 @media (max-width: 1200px) {
@@ -1417,7 +1657,7 @@ p {
     
     .farmer-card {
         max-width: 100%;
-        padding: 1.25rem;
+        padding: 1.5rem;
     }
     
     .farmers_heading h2 {
@@ -1441,21 +1681,32 @@ p {
     }
     
     .farmer-card {
-        padding: 1rem;
+        padding: 1.25rem;
     }
     
     .info-grid {
-        gap: 0.625rem;
+        gap: 0.75rem;
     }
     
     .info-item {
-        padding: 0.625rem 0.5rem;
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .farmer-image img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .farmer-image::before {
+        width: 90px;
+        height: 90px;
     }
 }
 
 /* Performance Optimizations */
 .farmer-card,
-.farmer-image img {
+.farmer-image img,
+.farmer-card::before {
     will-change: transform;
 }
 
@@ -1466,24 +1717,37 @@ p {
         animation-iteration-count: 1 !important;
         transition-duration: 0.2s !important;
     }
+    
+    .farmer-card::before {
+        animation: none !important;
+    }
+    
+    .farmer-image::before {
+        animation: none !important;
+    }
 }
 
 .farmer-card:focus-visible {
     outline: 2px solid lime;
-    outline-offset: 2px;
-    box-shadow: 0 0 0 4px rgba(0, 255, 0, 0.3);
+    outline-offset: 4px;
 }
 
-/* Loading State for Images */
+/* Micro-interactions */
+.farmer-card:active {
+    transform: translateY(-4px) scale(1.01);
+}
+
+/* Loading state enhancement */
 .farmer-image img[src=""], 
 .farmer-image img:not([src]),
 .farmer-image img[src="#"] {
-    background: linear-gradient(135deg, var(--neutral-700), var(--neutral-600));
+    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--neutral-400);
-    font-size: 1.5rem;
+    color: #666666;
+    font-size: 2rem;
+    border: 3px solid #333333;
 }
 
 .farmer-image img[src=""]:before,
@@ -1491,54 +1755,6 @@ p {
 .farmer-image img[src="#"]:before {
     content: '👤';
 }
-
-/* Smooth Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.farmer-card {
-    animation: fadeInUp 0.6s ease-out backwards;
-}
-
-.farmer-card:nth-child(n) { 
-    animation-delay: calc(var(--card-index, 0) * 50ms); 
-}
-
-/* Additional Tech-Dark Enhancements */
-.farmer-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, lime, transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.farmer-card:hover::after {
-    opacity: 1;
-}
-
-/* Glowing text effect for important elements */
-.revenue-value.positive,
-.farmer-name {
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
-}
-
-.farmer-card:hover .farmer-name {
-    text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-}
-
 /* Button at the bottom */
 .main-button-container {
   text-align: center;
