@@ -1243,9 +1243,7 @@ p {
 
 .crop-type {
     display: inline-block;
-    background: linear-gradient(135deg, 
-        rgba(0, 255, 0, 0.1) 0%, 
-        rgba(200, 255, 0, 0.1) 100%);
+    background: linear-gradient(135deg, var(--primary-emerald), var(--primary-dark));
     border: 1px solid lime;
     color: lime;
     font-size: 0.75rem;
