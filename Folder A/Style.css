@@ -1,10 +1,10 @@
 /* GLOBAL STYLES */
 :root {
-  /* Unified Lime & Black Tech Palette for Farmers Section */
+  /* Use the existing project colors for farmers section */
   --background-color: #000000;
   --text-color: #ffffff;
-  --primary-color: lime;        /* Tech Lime Green */
-  --accent-color: gold;         /* Gold for special accents/icons/buttons */
+  --primary-color: lime;
+  --accent-color: gold;
   --button-background: #000000;
   --button-text-color: lime;
   --popup-background: #ffffff;
@@ -25,26 +25,17 @@
   --dot-size: 2px;
   --dot-space: 20px;
 
-  /* Farmer Section Specific Tech/Neon Accent Colors */
-  --primary-emerald: lime;            /* Used for farmer highlights */
-  --primary-dark: #000000;            /* Deep Black for contrast */
-  --accent-cyan: #00ffea;             /* Neon cyan for tech accents */
-  --accent-purple: #39ff14;           /* Neon lime for tech neon badge */
-  --neutral-100: #e6ffe6;
-  --neutral-200: #b8f5b8;
-  --neutral-300: #7cf37c;
-  --neutral-400: #39ff14;
-  --neutral-500: #1aff1a;
-  --neutral-600: #222;
-  --neutral-700: #181818;
-  --neutral-800: #141414;
-  --neutral-900: #000000;
-  --glass-bg: rgba(50, 205, 50, 0.07);
-  --glass-border: rgba(50, 205, 50, 0.13);
-  --shadow-soft: 0 4px 6px -1px rgba(50, 205, 50, 0.10);
-  --shadow-medium: 0 10px 15px -3px rgba(50, 205, 50, 0.15);
-  --shadow-large: 0 25px 50px -12px rgba(50, 205, 50, 0.22);
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Add farmers section specific variables if needed */
+  --farmer-card-gradient: linear-gradient(135deg, #000 60%, lime 150%);
+  --farmer-card-border: 2px solid lime;
+  --farmer-card-glow: 0 0 16px 2px lime;
+  --farmers-section-bg: #000000;
+  --farmers-section-accent: gold;
+  --farmers-section-title-color: lime;
+  --farmers-section-card-bg: #111;
+  --farmers-section-card-text: #fff;
+  --farmers-section-badge-bg: gold;
+  --farmers-section-badge-text: #000;
 }
 
 * {
