@@ -3,7 +3,6 @@
   --background-color: #000000;
   --text-color: #ffffff;
   --primary-color: lime;
-  --secondary-color: #c8ff00;
   --accent-color: gold;
   --button-background: #000000;
   --button-text-color: lime;
@@ -1019,30 +1018,27 @@ p {
   outline: 2px solid var(--lime-primary);
   outline-offset: 2px;
 }
-:root {
-  /* Lime & Black Tech Palette */
-  --primary-emerald: #32cd32;          /* Lime Green */
-  --primary-dark: #0d0d0d;             /* Deep Black */
-  --accent-cyan: #00ffea;              /* Vibrant Cyan (for neon accent) */
-  --accent-purple: #00ff80;            /* Neon Lime (replacing purple for tech look) */
-  --neutral-100: #e6ffe6;              /* Light lime white */
-  --neutral-200: #b8f5b8;              /* Lime-tinted gray */
-  --neutral-300: #7cf37c;              /* Soft lime */
-  --neutral-400: #39ff14;              /* Vivid lime text */
-  --neutral-500: #1aff1a;              /* Strong lime shade */
-  --neutral-600: #222;                 /* Black shade for backgrounds */
-  --neutral-700: #181818;              /* Slightly lighter black */
-  --neutral-800: #141414;              /* Even lighter black */
-  --neutral-900: #0d0d0d;              /* Pure black */
 
-  /* Glass & Effects */
-  --glass-bg: rgba(50, 205, 50, 0.07); /* Lime glass effect */
-  --glass-border: rgba(50, 205, 50, 0.13); /* Lime glass border */
+
+ /* Farmer Section Specific Tech/Neon Accent Colors */
+  --primary-emerald: lime;            /* Used for farmer highlights */
+  --primary-dark: #000000;            /* Deep Black for contrast */
+  --accent-cyan: #00ffea;             /* Neon cyan for tech accents */
+  --accent-purple: #39ff14;           /* Neon lime for tech neon badge */
+  --neutral-100: #e6ffe6;
+  --neutral-200: #b8f5b8;
+  --neutral-300: #7cf37c;
+  --neutral-400: #39ff14;
+  --neutral-500: #1aff1a;
+  --neutral-600: #222;
+  --neutral-700: #181818;
+  --neutral-800: #141414;
+  --neutral-900: #000000;
+  --glass-bg: rgba(50, 205, 50, 0.07);
+  --glass-border: rgba(50, 205, 50, 0.13);
   --shadow-soft: 0 4px 6px -1px rgba(50, 205, 50, 0.10);
   --shadow-medium: 0 10px 15px -3px rgba(50, 205, 50, 0.15);
   --shadow-large: 0 25px 50px -12px rgba(50, 205, 50, 0.22);
-
-  /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
