@@ -1,6 +1,5 @@
 /* GLOBAL STYLES */
 :root {
-  /* Use the existing project colors for farmers section */
   --background-color: #000000;
   --text-color: #ffffff;
   --primary-color: lime;
@@ -24,18 +23,6 @@
   --dot-color: rgba(255, 255, 255, 0.5);
   --dot-size: 2px;
   --dot-space: 20px;
-
-  /* Add farmers section specific variables if needed */
-  --farmer-card-gradient: linear-gradient(135deg, #000 60%, lime 150%);
-  --farmer-card-border: 2px solid lime;
-  --farmer-card-glow: 0 0 16px 2px lime;
-  --farmers-section-bg: #000000;
-  --farmers-section-accent: gold;
-  --farmers-section-title-color: lime;
-  --farmers-section-card-bg: #111;
-  --farmers-section-card-text: #fff;
-  --farmers-section-badge-bg: gold;
-  --farmers-section-badge-text: #000;
 }
 
 * {
