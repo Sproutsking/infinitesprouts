@@ -3152,13 +3152,13 @@ p {
 
 
 
-/* Landing Section - Cutting Edge Redesign */
+/* Landing Section - Enhanced Styling (Non-Breaking) */
+
+/* Main section styling - preserve existing layout */
 .main {
   padding: 3%;
-  min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--background-color) 0%, #111111 50%, var(--background-color) 100%);
 }
 
 .main_container {
@@ -3167,24 +3167,20 @@ p {
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 60px;
-  align-items: center;
-  min-height: 80vh;
+  /* Preserve existing flexbox/display properties */
 }
 
-/* Content Area */
+/* Enhanced content styling */
 .main-content {
   padding: 0 12px;
-  animation: slideInLeft 1s ease-out;
+  position: relative;
+  z-index: 3;
 }
 
 .main-content h1 {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 2rem;
   text-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
 }
 
@@ -3207,12 +3203,11 @@ p {
 .main-content p {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.6;
-  margin-bottom: 3rem;
   color: rgba(255, 255, 255, 0.9);
   max-width: 600px;
 }
 
-/* Button Container */
+/* Enhanced button styling */
 .main-button-container {
   display: flex;
   gap: 1.5rem;
@@ -3273,7 +3268,7 @@ p {
   box-shadow: 0 12px 35px rgba(0, 255, 0, 0.4);
 }
 
-/* Hero Card - Advanced Design */
+/* Enhanced Hero Card */
 .hero-card {
   padding: 0 12px;
   background: var(--glass-bg);
@@ -3284,7 +3279,7 @@ p {
   box-shadow: var(--shadow-large);
   position: relative;
   overflow: hidden;
-  animation: slideInRight 1s ease-out;
+  margin-top: 2rem;
 }
 
 .hero-card::before {
@@ -3297,6 +3292,7 @@ p {
   background: conic-gradient(from 0deg, transparent, var(--primary-color), transparent);
   animation: rotate 4s linear infinite;
   opacity: 0.1;
+  z-index: 1;
 }
 
 .card-header {
@@ -3305,7 +3301,7 @@ p {
   gap: 1rem;
   margin-bottom: 2rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .card-icon {
@@ -3335,7 +3331,7 @@ p {
   gap: 1rem;
   margin-bottom: 2rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .stat-item {
@@ -3367,7 +3363,7 @@ p {
 
 .card-footer {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .tech-indicators {
@@ -3394,28 +3390,6 @@ p {
 }
 
 /* Animations */
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @keyframes textGlow {
   from {
     text-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
@@ -3454,92 +3428,16 @@ p {
   }
 }
 
-/* Responsive Design */
-
-/* Extra Large Devices (1441px and up) */
-@media only screen and (min-width: 1441px) {
-  .main_container {
-    grid-template-columns: 1fr 450px;
-    gap: 80px;
-  }
-  
-  .hero-card {
-    padding: 2.5rem;
-  }
-  
-  .card-icon {
-    width: 70px;
-    height: 70px;
-    font-size: 1.8rem;
-  }
-}
-
-/* Large Devices (1025px to 1440px) */
-@media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  .main_container {
-    grid-template-columns: 1fr 400px;
-    gap: 60px;
-  }
-}
-
-/* Medium Devices (769px to 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .main_container {
-    grid-template-columns: 1fr 350px;
-    gap: 40px;
-  }
-  
-  .hero-card {
-    padding: 1.5rem;
-  }
-  
-  .card-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-  }
-  
-  .main-content h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-  }
-}
-
-/* Small Devices (481px to 768px) */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .main_container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-  
-  .hero-card {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 1.5rem;
-  }
-  
-  .main-button-container {
-    justify-content: center;
-  }
-  
-  .btn {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
-}
+/* Responsive Media Queries */
 
 /* Extra Small Devices (480px and down) */
 @media only screen and (max-width: 480px) {
   .main {
     padding: 3%;
-    min-padding: 10px;
   }
   
   .main_container {
     padding: 3%;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
   }
   
   .main-content,
@@ -3547,9 +3445,14 @@ p {
     padding: 0 10px;
   }
   
+  .main-content h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+  
   .hero-card {
     padding: 1.2rem;
     border-radius: 16px;
+    margin-top: 1.5rem;
   }
   
   .card-header {
@@ -3572,6 +3475,7 @@ p {
     flex-direction: column;
     text-align: center;
     gap: 0.3rem;
+    padding: 0.6rem 0.8rem;
   }
   
   .main-button-container {
@@ -3588,7 +3492,7 @@ p {
     padding: 0.8rem 1.2rem;
   }
   
-  /* Hide decorative elements on very small screens */
+  /* Hide decorative elements */
   .tech-indicators {
     display: none;
   }
@@ -3598,119 +3502,113 @@ p {
   }
 }
 
-/* Ultra Small Devices (320px and down) */
-@media only screen and (max-width: 320px) {
-  .main-content h1 {
-    font-size: clamp(1.8rem, 8vw, 2.5rem);
-  }
-  
-  .main-content p {
-    font-size: 0.9rem;
-  }
-  
-  .hero-card {
-    padding: 1rem;
-  }
-  
-  .card-stats {
-    gap: 0.8rem;
-  }
-  
-  .stat-item {
-    padding: 0.6rem 0.8rem;
-  }
-}
-
-/* Landscape Mobile Devices */
-@media only screen and (max-height: 500px) and (orientation: landscape) {
+/* Small Devices (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
   .main {
-    min-height: auto;
-    padding: 2%;
+    padding: 3%;
   }
   
   .main_container {
-    grid-template-columns: 1fr 300px;
-    gap: 30px;
-    min-height: auto;
+    padding: 3%;
   }
   
-  .main-content h1 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    margin-bottom: 1rem;
-  }
-  
-  .main-content p {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .hero-card {
-    padding: 1rem;
-  }
-  
-  .card-header {
-    margin-bottom: 1rem;
-  }
-  
-  .card-stats {
-    gap: 0.5rem;
-  }
-}
-
-/* High DPI Displays */
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-       only screen and (min-resolution: 192dpi) {
-  .main-content h1 {
-    text-shadow: 0 0 20px rgba(0, 255, 0, 0.4), 0 0 40px rgba(0, 255, 0, 0.2);
-  }
-  
-  .hero-card {
-    backdrop-filter: blur(25px);
-  }
-}
-
-/* Tablet Portrait Specific */
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .main_container {
-    grid-template-columns: 1fr;
-    gap: 50px;
-    text-align: center;
-  }
-  
-  .hero-card {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-}
-
-/* Very Large Screens (4K and Ultra-wide) */
-@media only screen and (min-width: 1920px) {
-  .main_container {
-    grid-template-columns: 1fr 500px;
-    gap: 100px;
-    max-width: 1800px;
-  }
-  
-  .hero-card {
-    padding: 3rem;
-  }
-  
-  .main-content h1 {
-    font-size: clamp(3.5rem, 5vw, 5.5rem);
-  }
-  
-  .main-content p {
-    font-size: 1.3rem;
-  }
-}
-
-/* Accessibility and Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
   .main-content,
   .hero-card {
-    animation: none;
+    padding: 0 11px;
   }
   
+  .hero-card {
+    max-width: 400px;
+    margin: 2rem auto 0;
+    padding: 1.5rem;
+  }
+  
+  .main-button-container {
+    justify-content: center;
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Medium Devices (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .main {
+    padding: 3%;
+  }
+  
+  .main_container {
+    padding: 3%;
+  }
+  
+  .main-content,
+  .hero-card {
+    padding: 0 12px;
+  }
+  
+  .hero-card {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .main-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+}
+
+/* Large Devices (1025px to 1440px) */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .main {
+    padding: 3%;
+  }
+  
+  .main_container {
+    padding: 3%;
+  }
+  
+  .main-content,
+  .hero-card {
+    padding: 0 12px;
+  }
+}
+
+/* Extra Large Devices (1441px and up) */
+@media only screen and (min-width: 1441px) {
+  .main {
+    padding: 3%;
+  }
+  
+  .main_container {
+    padding: 3%;
+    max-width: 1600px;
+  }
+  
+  .main-content,
+  .hero-card {
+    padding: 0 12px;
+  }
+  
+  .hero-card {
+    padding: 2.5rem;
+  }
+  
+  .card-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
   .intro-green,
   .gold,
   .tech-dot,
@@ -3720,32 +3618,5 @@ p {
   
   .btn::before {
     display: none;
-  }
-}
-
-/* Dark Mode Adjustments */
-@media (prefers-color-scheme: dark) {
-  .hero-card {
-    background: rgba(0, 0, 0, 0.9);
-    border: 1px solid rgba(0, 255, 0, 0.2);
-  }
-}
-
-/* Print Styles */
-@media print {
-  .main {
-    background: white;
-    color: black;
-  }
-  
-  .hero-card::before,
-  .tech-indicators {
-    display: none;
-  }
-  
-  .btn {
-    border: 2px solid black;
-    color: black;
-    background: white;
   }
 }
