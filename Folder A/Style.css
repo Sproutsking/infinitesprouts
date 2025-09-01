@@ -3185,7 +3185,7 @@ section, .landing-page, .team-page, .farmers-page {
 
 /* Extra Small Devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
-  section, .landing-page, .team-page, .farmers-page {
+  section {
     padding: 3%;
     min-padding: 10px;
   }
@@ -3217,7 +3217,7 @@ section, .landing-page, .team-page, .farmers-page {
 
 /* Small Devices (portrait tablets and large phones, 481px to 768px) */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  section, .landing-page, .team-page, .farmers-page {
+  section {
     padding: 3%;
   }
   
@@ -3247,7 +3247,7 @@ section, .landing-page, .team-page, .farmers-page {
 
 /* Medium Devices (landscape tablets, 769px to 1024px) */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  section, .landing-page, .team-page, .farmers-page {
+  section {
     padding: 3%;
   }
   
@@ -3277,7 +3277,7 @@ section, .landing-page, .team-page, .farmers-page {
 
 /* Large Devices (laptops/desktops, 1025px to 1440px) */
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  section, .landing-page, .team-page, .farmers-page {
+  section {
     padding: 3%;
   }
   
@@ -3307,7 +3307,7 @@ section, .landing-page, .team-page, .farmers-page {
 
 /* Extra Large Devices (large laptops and desktops, 1441px and up) */
 @media only screen and (min-width: 1441px) {
-  section, .landing-page, .team-page, .farmers-page {
+  section {
     padding: 3%;
   }
   
