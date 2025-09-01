@@ -3147,3 +3147,280 @@ p {
   margin: 4px;
   border: 1px solid var(--primary-color);
 }
+
+
+
+
+
+/* Base styles - 3% padding for all sections */
+section, .landing-page, .team-page, .farmers-page {
+  padding: 3%;
+  box-sizing: border-box;
+}
+
+/* Container elements maintain 3% padding */
+.main_container,
+.about_container,
+.ecosystem_container,
+.team_container,
+.farmers_container,
+.footer-container {
+  padding: 3%;
+  box-sizing: border-box;
+}
+
+/* Content elements with minimum distance from edge */
+.main-content,
+.about_heading,
+.ecosystem_heading,
+.team_heading,
+.farmers_heading,
+.card-container,
+.farmers-grid,
+.team_container_content {
+  margin: 0;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* Extra Small Devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  section, .landing-page, .team-page, .farmers-page {
+    padding: 3%;
+    min-padding: 10px;
+  }
+  
+  .main_container,
+  .about_container,
+  .ecosystem_container,
+  .team_container,
+  .farmers_container,
+  .footer-container {
+    padding: 3%;
+    min-padding: 10px;
+  }
+  
+  .main-content,
+  .about_heading,
+  .ecosystem_heading,
+  .team_heading,
+  .farmers_heading {
+    padding: 0 10px;
+  }
+  
+  .card-container,
+  .farmers-grid,
+  .team_container_content {
+    padding: 0 10px;
+  }
+}
+
+/* Small Devices (portrait tablets and large phones, 481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  section, .landing-page, .team-page, .farmers-page {
+    padding: 3%;
+  }
+  
+  .main_container,
+  .about_container,
+  .ecosystem_container,
+  .team_container,
+  .farmers_container,
+  .footer-container {
+    padding: 3%;
+  }
+  
+  .main-content,
+  .about_heading,
+  .ecosystem_heading,
+  .team_heading,
+  .farmers_heading {
+    padding: 0 11px;
+  }
+  
+  .card-container,
+  .farmers-grid,
+  .team_container_content {
+    padding: 0 11px;
+  }
+}
+
+/* Medium Devices (landscape tablets, 769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  section, .landing-page, .team-page, .farmers-page {
+    padding: 3%;
+  }
+  
+  .main_container,
+  .about_container,
+  .ecosystem_container,
+  .team_container,
+  .farmers_container,
+  .footer-container {
+    padding: 3%;
+  }
+  
+  .main-content,
+  .about_heading,
+  .ecosystem_heading,
+  .team_heading,
+  .farmers_heading {
+    padding: 0 12px;
+  }
+  
+  .card-container,
+  .farmers-grid,
+  .team_container_content {
+    padding: 0 12px;
+  }
+}
+
+/* Large Devices (laptops/desktops, 1025px to 1440px) */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  section, .landing-page, .team-page, .farmers-page {
+    padding: 3%;
+  }
+  
+  .main_container,
+  .about_container,
+  .ecosystem_container,
+  .team_container,
+  .farmers_container,
+  .footer-container {
+    padding: 3%;
+  }
+  
+  .main-content,
+  .about_heading,
+  .ecosystem_heading,
+  .team_heading,
+  .farmers_heading {
+    padding: 0 12px;
+  }
+  
+  .card-container,
+  .farmers-grid,
+  .team_container_content {
+    padding: 0 12px;
+  }
+}
+
+/* Extra Large Devices (large laptops and desktops, 1441px and up) */
+@media only screen and (min-width: 1441px) {
+  section, .landing-page, .team-page, .farmers-page {
+    padding: 3%;
+  }
+  
+  .main_container,
+  .about_container,
+  .ecosystem_container,
+  .team_container,
+  .farmers_container,
+  .footer-container {
+    padding: 3%;
+  }
+  
+  .main-content,
+  .about_heading,
+  .ecosystem_heading,
+  .team_heading,
+  .farmers_heading {
+    padding: 0 12px;
+  }
+  
+  .card-container,
+  .farmers-grid,
+  .team_container_content {
+    padding: 0 12px;
+  }
+}
+
+/* Ensure box-sizing is consistent */
+* {
+  box-sizing: border-box;
+}
+
+/* Header specific adjustments */
+.header {
+  padding: 3%;
+}
+
+.header-content,
+.header-content-details {
+  padding: 0 12px;
+}
+
+/* Card specific adjustments */
+.card,
+.farmer-card,
+.team-cards,
+.ecosystem-card {
+  margin: 10px;
+  padding: 12px;
+}
+
+/* Footer adjustments */
+.footer {
+  padding: 3%;
+}
+
+.footer-column {
+  padding: 0 12px;
+}
+
+/* Responsive grid adjustments */
+@media only screen and (max-width: 480px) {
+  .farmers-grid,
+  .team_container_content,
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .farmers-grid,
+  .team_container_content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .farmers-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
+  .team_container_content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .farmers-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  .team_container_content {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  .card-container {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+}
