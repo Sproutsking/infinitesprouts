@@ -3214,6 +3214,9 @@ p {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all var(--transition-speed) ease;
+  /* Glass effect */
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
 }
 
 /* Animations */
@@ -3259,44 +3262,14 @@ p {
 
 /* Extra Small Devices (480px and down) */
 @media only screen and (max-width: 480px) {
-  .main {
-    padding: 3%;
-  }
-  
   .main_container {
     padding: 3%;
-  }
-  
-  .main-content,
-  .hero-card {
-    padding: 0 10px;
   }
   
   .main-content h1 {
     font-size: clamp(2rem, 8vw, 2.8rem);
   }
   
-  .hero-card {
-    padding: 12px;
-    border-radius: 16px;
-    margin-top: 14px;
-  }
-  
-  .card-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 7px;
-  }
-  
-  .card-title {
-    font-size: 16px;
-  }
-  
-  .stat-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 6px;
-  }
   
   .main-button-container {
     flex-direction: column;
@@ -3318,25 +3291,8 @@ p {
 /* Small Devices (481px to 768px) */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .main {
-    padding: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   
-  .main_container {
-    padding: 3%;
-  }
-  
-  .hero-card {
-    max-width: 400px;
-    margin:10px;
-    padding: 10px;
-  }
-  
-  .main-button-container {
-    justify-content: center;
-  }
-  
-  .btn {
-    font-size: 1rem;
-    padding: 8px 10px;
-  }
 }
