@@ -3136,306 +3136,7 @@ p {
 }
 
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .team_container_content {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-  }
 
-  .farmers-grid {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .header {
-    height: 70px;
-    justify-content: space-between;
-    box-shadow: 0 0 2px var(--lime-primary);
-  }
-
-  .header-content {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    max-width: 100vw;
-    height: 90vh;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--background-color);
-    transform: translateY(-100%);
-    transition: transform 0.5s ease-in-out;
-    z-index: 999;
-    display: none;
-  }
-
-  #main-check:checked ~ .header-content,
-  #main-check-team:checked ~ .header-content,
-  #main-check-farmers:checked ~ .header-content {
-    display: flex;
-    transform: translateY(0);
-    box-shadow: 0 0 2px rgba(0, 255, 0, 0.5);
-  }
-
-  .header-content-details {
-    width: 80%;
-    flex-direction: column;
-    height: 100%;
-    margin: 6px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: var(--background-color);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .header-content ul {
-    flex-direction: column;
-    width: 100%;
-    height: 60%;
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 0;
-    gap: 2px;
-  }
-
-  .header-content ul li {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .header-content ul li a.nav-link,
-  .header-content ul li a.goto {
-    width: 80%;
-    margin: 2px; /* Unified margin for alignment */
-    padding: 12px;
-    font-size: 1.2rem;
-    border-radius: 15px;
-    line-height: 30px;
-    text-align: center;
-  }
-
-  .header-content ul li a.nav-link:hover,
-  .header-content ul li a.goto:hover {
-    background-color: var(--lime-primary);
-    color: black;
-    font-weight: 500;
-    border: 1.5px solid var(--lime-primary);
-  }
-
-  .menu-icon {
-    display: flex;
-    margin-top: 10px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .theme-toggle_switch {
-    display: none;
-  }
-
-  #main-check:checked ~ .header-content .theme-toggle_switch,
-  #main-check-team:checked ~ .header-content .theme-toggle_switch,
-  #main-check-farmers:checked ~ .header-content .theme-toggle_switch {
-    display: flex;
-  }
-
-  #social-icon {
-    height: 10%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #social-icon li .bx {
-    padding: 10px;
-    margin: 0;
-    color: var(--lime-primary);
-    background: black;
-    border: 1px solid var(--lime-primary);
-    box-shadow: 0 0 4px rgba(0, 255, 0, 0.5);
-    border-radius: 12px;
-  }
-
-  .main {
-    padding-top: 15vh;
-    min-height: calc(100vh - 70px);
-    justify-content: center;
-    --dot-size: 2.5px;
-    --dot-space: 16px;
-    background:
-      radial-gradient(600px circle at center 10px, var(--lime-primary), #031801, #021101, 35%, transparent 51%),
-      radial-gradient(600px circle at right center, var(--lime-dark), #08290e, #051606, 36%, transparent 50.4%),
-      radial-gradient(1000px circle at 20px bottom, var(--lime-primary), #033307, #022707, 36%, transparent 51%),
-      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-      var(--dot-color);
-  }
-
-  .main_container {
-    padding: 80px 0 0; /* Added padding-top for mobile */
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    width: 90%;
-  }
-
-  .main-content {
-    display: flex;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .main-content h1 {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .intro-green {
-    font-size: 2.8rem;
-  }
-
-  .gold {
-    font-size: 3.5rem;
-  }
-
-  .main-content p {
-    font-size: 1.1rem;
-    max-width: 90%;
-    padding: 10px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(0, 255, 0, 0.2), rgba(0, 0, 0, 0.4));
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(0, 255, 0, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(0, 255, 0, 0.1);
-    animation: glassPulse 4s ease-in-out infinite;
-  }
-
-  .main-button-container {
-    gap: 20px;
-    padding: 0;
-    margin-bottom: 50px; /* Reduced margin */
-    justify-content: space-between;
-  }
-
-  .btn {
-    padding: 14px 28px;
-    font-size: 10px;
-    width: 40%;
-  }
-
-  .hero-card {
-    min-width: 0;
-    width: 100%;
-    max-width: 90vw;
-    padding: 10px;
-    margin: 10px;
-  }
-
-  .team_container_content {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .team-cards {
-    padding: 10px;
-    margin: 10px;
-    min-height: 350px;
-    max-width: 280px;
-  }
-
-  .icon-img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .team-icon::before {
-    width: 100px;
-    height: 100px;
-  }
-
-  .card-section {
-    height: 280px;
-    --dot-size: 2.5px;
-    --dot-space: 16px;
-    background:
-      radial-gradient(600px circle at center 10px, var(--lime-primary), #031801, #021101, 35%, transparent 51%),
-      radial-gradient(600px circle at right center, var(--lime-dark), #08290e, #051606, 36%, transparent 50.4%),
-      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-      var(--dot-color);
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-
-  .card {
-    width: 180px;
-    height: 200px;
-    padding: 10px;
-    margin: 10px;
-  }
-
-  .partner-image {
-    height: 120px;
-  }
-
-  .partner-info {
-    padding: 10px;
-  }
-
-  .partner-name {
-    font-size: 0.95rem;
-    margin-bottom: 4px;
-  }
-
-  .partner-description {
-    font-size: 0.7rem;
-    line-height: 1.3;
-  }
-
-  .ecosystem-card {
-    padding: 10px;
-    margin: 10px;
-    max-width: 100vw;
-  }
-
-  .farmers-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-  }
-
-  .farmer-card {
-    padding: 10px;
-    margin: 10px;
-    max-width: 100%;
-  }
-
-  @keyframes movecards {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-200px * 10 - 200px)); }
-  }
-
-  @keyframes glassPulse {
-    0%, 100% { box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2), inset 0 0 20px rgba(0, 255, 0, 0.1); }
-    50% { box-shadow: 0 10px 40px rgba(0, 255, 0, 0.3), inset 0 0 30px rgba(0, 255, 0, 0.2); }
-  }
-}
 
 @media (max-width: 800px) {
   .main {
@@ -3484,6 +3185,18 @@ p {
     font-size: 8px;
     min-width: 100px;
   }
+  .hero-card {
+    min-width: 0;
+    width: 100%;
+    max-width: 90vw;
+    padding: 10px;
+    margin: 10px;
+  }
+  .ecosystem-card {
+    padding: 10px;
+    margin: 10px;
+    max-width: 100vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3500,7 +3213,7 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    margin-bottom: 50px; /* Reduced margin */
+    margin-bottom: 30px; /* Reduced margin */
   }
 
   .btn {
@@ -3535,39 +3248,23 @@ p {
   .ecosystem-card {
     padding: 10px;
     margin: 10px;
-    max-width: 100vw;
-  }
-
-  .team_container {
-    padding: 3rem 1rem;
-  }
-
-  .team_container_content {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
-  }
-
-  .team-cards {
-    padding: 10px;
-    margin: 10px;
-    min-height: 350px;
-    max-width: 100%;
+    width: 100%;
   }
 
   .hero-card {
     padding: 10px;
-    margin: 10px;
+    margin: 0px;
   }
 
   .card {
     padding: 10px;
-    margin: 10px;
+    margin: 0px;
   }
 }
 
 @media (max-width: 700px) {
   .ecosystem_section {
-    padding: 2.2rem 1vw;
+    padding: 14px 0px;
   }
 
   .ecosystem_heading h2 {
@@ -3576,8 +3273,6 @@ p {
 
   .ecosystem-card {
     padding: 10px;
-    margin: 10px;
-    max-width: 100vw;
   }
 }
 
@@ -3601,8 +3296,7 @@ p {
 
   .team-cards {
     padding: 10px;
-    margin: 10px;
-    min-height: 320px;
+    min-height: 300px;
     max-width: 100%;
   }
 
@@ -3633,7 +3327,7 @@ p {
 
 @media (max-width: 480px) {
   .main {
-    padding: 1rem;
+    padding: 14px;
     --dot-size: 2px;
     --dot-space: 12px;
     background:
@@ -3647,7 +3341,6 @@ p {
 
   .main_container {
     width: 100%;
-    max-width: 100vw;
     padding: 80px 0 0; /* Added padding-top */
   }
 
@@ -3682,7 +3375,7 @@ p {
   }
 
   .farmers_section {
-    padding: 2rem 1rem 3rem;
+    padding: 12px 0px;
   }
 
   .farmers-grid {
@@ -3692,7 +3385,6 @@ p {
 
   .farmer-card {
     padding: 10px;
-    margin: 10px;
   }
 
   .info-grid {
@@ -3715,17 +3407,14 @@ p {
 
   .hero-card {
     padding: 10px;
-    margin: 10px;
   }
 
   .card {
     padding: 10px;
-    margin: 10px;
   }
 
   .ecosystem-card {
     padding: 10px;
-    margin: 10px;
   }
 
   .team-cards {
@@ -3735,36 +3424,6 @@ p {
 }
 
 @media (max-width: 400px) {
-  .main {
-    --dot-size: 2px;
-    --dot-space: 10px;
-    background:
-      radial-gradient(300px circle at center 10px, var(--lime-primary), #031801, #021101, 35%, transparent 51%),
-      radial-gradient(300px circle at right center, var(--lime-dark), #08290e, #051606, 36%, transparent 50.4%),
-      radial-gradient(700px circle at 20px bottom, var(--lime-primary), #033307, #022707, 36%, transparent 51%),
-      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-      var(--dot-color);
-  }
-
-  .header-content-details {
-    width: 92%;
-  }
-
-  .header-content ul li a.nav-link,
-  .header-content ul li a.goto {
-    width: 90%;
-    margin: 2px; /* Unified margin */
-  }
-
-  .main h1 {
-    font-size: 2rem;
-  }
-
-  .intro-green {
-    font-size: 1.8rem;
-  }
-
   .gold {
     font-size: 2.2rem;
     padding: 5px 0;
@@ -3810,31 +3469,5 @@ p {
   .farmer-card {
     padding: 10px;
     margin: 10px;
-  }
-}
-
-/* Performance Optimizations */
-.team-cards,
-.icon-img,
-.team-social-icon li a,
-.farmer-card,
-.farmer-image img,
-.farmer-card::before {
-  will-change: transform;
-}
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.2s !important;
-  }
-
-  .team-cards::before,
-  .team-icon::before,
-  .farmer-card::before,
-  .farmer-image::before {
-    animation: none !important;
   }
 }
