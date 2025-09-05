@@ -3194,21 +3194,6 @@ p {
   --icon-bg: #222;
 }
 
-/* Hero Card */
-/* .hero-card {
-  padding: 2rem;
-  margin: 2rem 0;
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 24px;
-  box-shadow: var(--shadow-large);
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 90vw;
-} */
-
 .hero-card::before {
   content: '';
   position: absolute;
@@ -3373,6 +3358,80 @@ p {
   text-shadow: 0 0 10px var(--lime-primary);
 }
 
+/* About Section */
+.about_us {
+  padding: 2rem 1rem; /* Reduced padding */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about_heading {
+  text-align: center;
+  margin-bottom: 2rem; /* Reduced margin */
+}
+
+.about_heading h2 {
+  font-size: 2.5rem;
+  color: var(--lime-primary);
+  text-shadow: 0 0 10px var(--lime-primary);
+}
+
+.about_container ol {
+  list-style: none;
+  counter-reset: question-counter;
+}
+
+.about_container li {
+  counter-increment: question-counter;
+  margin: 0; /* Removed margin */
+  padding: 1rem; /* Reduced padding */
+  background: var(--sidebar-background);
+  border: var(--border);
+  border-radius: 15px;
+  position: relative;
+  transition: all var(--transition-speed);
+}
+
+.about_container li:hover {
+  border-color: var(--lime-primary);
+  box-shadow: var(--box-shadow-1);
+}
+
+.about_container li::before {
+  content: counter(question-counter);
+  position: absolute;
+  top: -15px;
+  left: 2rem;
+  background: var(--lime-primary);
+  color: var(--background-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.marker {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.about_container h3 {
+  color: var(--lime-dark);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.question {
+  color: var(--lime-primary);
+}
+
+.about_container p {
+  opacity: 0.9;
+  line-height: 1.8;
+}
 
 /* Ecosystem Section */
 .ecosystem_section {
@@ -3399,7 +3458,7 @@ p {
 
 .ecosystem-card {
   background: var(--primary-black);
-  border: 1px solid var(--lime-primary);
+  border: 2px solid var(--lime-primary);
   border-radius: 15px;
   box-shadow: var(--shadow-medium), 0 0 0 2px var(--lime-primary);
   padding: 12px;
@@ -3424,6 +3483,62 @@ p {
   opacity: 0.4;
   z-index: 0;
   pointer-events: none;
+}
+
+.ecosystem-card:hover {
+  box-shadow: 0 16px 64px var(--lime-glow), 0 0 0 3px var(--lime-primary);
+  transform: translateY(-8px) scale(1.04);
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 58px;
+  width: 58px;
+  background: var(--icon-bg);
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 0 16px var(--lime-primary), 0 0 28px #111 inset;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.icon-wrapper i {
+  font-size: 2.4rem;
+  color: var(--lime-primary);
+  text-shadow: 0 0 8px var(--lime-glow), 0 0 10px #111;
+  transition: color 0.2s;
+}
+
+.ecosystem-card:hover .icon-wrapper {
+  background: linear-gradient(135deg, #222 10%, var(--lime-glow) 90%);
+  box-shadow: 0 0 32px var(--lime-primary), 0 0 24px var(--lime-glow);
+}
+
+h4 {
+  color: var(--lime-primary);
+  font-size: 1.28rem;
+  font-weight: 700;
+  margin: 0.3rem 0;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 7px var(--lime-glow);
+}
+
+p {
+  color: var(--lime-dark);
+  font-size: 1.04rem;
+  opacity: 0.86;
+  margin: 0.12rem 0 0.2rem 0;
+  line-height: 1.6;
 }
 
 /* Team Section */
