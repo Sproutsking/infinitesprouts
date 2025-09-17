@@ -1823,6 +1823,7 @@ p {
       linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
       var(--dot-color);
       border-bottom: 1px solid lime;
+      border-top: 1px solid lime;
 }
 
 .card-container:hover {
