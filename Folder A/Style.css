@@ -66,6 +66,15 @@ html, body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
+    --dot-size: 2.5px;
+    --dot-space: 16px;
+    background:
+      radial-gradient(600px circle at center 10px, var(--lime-primary), #031801, #021101, 35%, transparent 51%),
+      radial-gradient(600px circle at right center, var(--lime-dark), #08290e, #051606, 36%, transparent 50.4%),
+      radial-gradient(1000px circle at 20px bottom, var(--lime-primary), #033307, #022707, 36%, transparent 51%),
+      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
 }
 
 /* Body-Wide Animated Dot Pattern */
@@ -327,6 +336,20 @@ body::before {
                 var(--dot-color);
                min-height: 100vh;
         }
+        .main {
+    padding-top: 15vh;
+    min-height: calc(100vh - 70px);
+    justify-content: center;
+    --dot-size: 2.5px;
+    --dot-space: 16px;
+    background:
+      radial-gradient(600px circle at center 10px, var(--lime-primary), #031801, #021101, 35%, transparent 51%),
+      radial-gradient(600px circle at right center, var(--lime-dark), #08290e, #051606, 36%, transparent 50.4%),
+      radial-gradient(1000px circle at 20px bottom, var(--lime-primary), #033307, #022707, 36%, transparent 51%),
+      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
+  }
 
         .main::before {
             content: '';
@@ -354,16 +377,6 @@ body::before {
             z-index: -1;
             pointer-events: none;
             box-shadow: inset 0 0 100px rgba(0, 255, 0, 0.2); /* Added subtle glow */
-        }
-
-        body.light-theme .main {
-            background-image:
-                radial-gradient(800px circle at center 10px, #d4ffd4, #c8ff00, #b0ff00, 35%, transparent 51%),
-                radial-gradient(800px circle at right center, #e0ffd4, #d0ff00, #b8ff00, 36%, transparent 50.4%),
-                radial-gradient(1200px circle at 20px bottom, #d4ffd4, #c8ff00, #b0ff00, 36%, transparent 51%),
-                linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-                linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-                var(--dot-color);
         }
 
         body.light-theme .main::before {
@@ -1797,6 +1810,19 @@ p {
   width: max-content;
   flex-wrap: nowrap;
   animation: movecards 60s linear infinite;
+  padding-top: 20px;
+  padding-bottom: 20px;
+    justify-content: center;
+    --dot-size: 2.5px;
+    --dot-space: 16px;
+    background:
+      radial-gradient(600px circle at center 10px, var(--lime-primary), #031801, #021101, 35%, transparent 51%),
+      radial-gradient(600px circle at right center, var(--lime-dark), #08290e, #051606, 36%, transparent 50.4%),
+      radial-gradient(1000px circle at 20px bottom, var(--lime-primary), #033307, #022707, 36%, transparent 51%),
+      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
+      border-bottom: 1px solid lime;
 }
 
 .card-container:hover {
