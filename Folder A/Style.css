@@ -674,6 +674,7 @@ body::before {
   box-shadow: var(--shadow-large);
   position: relative;
   overflow: hidden;
+  margin-bottom: 2%;
 }
 
 .hero-card::before {
