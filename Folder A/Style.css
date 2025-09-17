@@ -502,8 +502,8 @@ body::before {
 
         .btn {
             text-decoration: none;
-            padding: 16px 32px;
-            font-size: 1.2rem;
+            padding: 12px 20px;
+            font-size: 14px;
             border-radius: 50px;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
@@ -640,7 +640,7 @@ body::before {
   justify-content: space-between;
   max-width: 1400px;
   width: 100%;
-  paddingt: 4%;
+  padding: 4%;
   padding-bottom: 0;
   gap: 4rem;
 }
