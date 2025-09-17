@@ -408,9 +408,9 @@ body::before {
             color: var(--primary-color);
             margin: 0;
             text-shadow: 
-                0 0 20px rgba(0, 255, 0, 0.8), 
-                0 0 40px rgba(0, 255, 0, 0.6),
-                0 0 60px rgba(0, 255, 0, 0.4);
+                0 0 10px rgba(0, 255, 0, 0.8), 
+                0 0 30px rgba(0, 255, 0, 0.6),
+                0 0 50px rgba(0, 255, 0, 0.4);
             line-height: 1.1;
             position: relative;
         }
