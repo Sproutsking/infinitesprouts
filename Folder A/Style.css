@@ -454,7 +454,7 @@ body::before {
             animation: 
                 goldFlow 4s ease-in-out infinite,
 /*                 goldLevitate 6s ease-in-out infinite, */
-/*                 goldGlow 3s ease-in-out infinite; */
+                goldGlow 3s ease-in-out infinite;
             text-shadow: 
                 0 0 2px rgba(255, 215, 0, 0.8),
                 0 0 3px rgba(255, 215, 0, 0.5);
